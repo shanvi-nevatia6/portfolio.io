@@ -31,8 +31,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;ali
 .nav-cta:hover{background:var(--orange2);}
 
 /* PAGES */
-.page{display:none;}
-.page.active{display:block;}
+.page{display:none;position:absolute;top:0;left:0;right:0;}
+.page.active{display:block;position:relative;}
 
 /* SHARED */
 .page-header{padding:120px 64px 52px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
@@ -167,7 +167,7 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
 .exp-chev{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--muted);transition:transform 0.28s,background 0.2s;}
 .exp-card.open .exp-chev{transform:rotate(180deg);background:var(--orange);color:var(--white);}
 .exp-body{max-height:0;overflow:hidden;transition:max-height 0.38s cubic-bezier(0.4,0,0.2,1);}
-.exp-card.open .exp-body{max-height:700px;}
+.exp-card.open .exp-body{max-height:900px;}
 .exp-divider{height:1px;background:var(--border);margin:0 28px 18px;}
 .exp-inner{padding:0 28px 24px 84px;}
 .exp-inner ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
@@ -298,6 +298,11 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
   .about-grid{grid-template-columns:1fr;}.about-full{grid-column:span 1;}
   .vitals{grid-template-columns:1fr 1fr;}
 }
+
+/* Prevent page content bleed */
+.page{overflow:hidden;}
+
+body{overflow-x:hidden;}
 </style>
 </head>
 <body>
@@ -330,6 +335,7 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
   <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank" style="color:var(--orange2);">Resume ↗</a>
 </div>
 
+<div id="page-container" style="position:relative;overflow:hidden;">
 <!-- ══════════ HOME ══════════ -->
 <div class="page active" id="page-home">
 <section id="hero">
@@ -383,13 +389,13 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
     <span class="ab-btn" onclick="showPage('about')">More about me →</span>
   </div>
   <div class="reveal">
-    <p class="ab-p">I'm a <strong>Robotics Engineering Technology</strong> student at Purdue (Manufacturing ET, Robotics track) on the ML Optimization track, with minors in CIT and Management and a certificate in Data Science.</p>
+    <p class="ab-p">I'm a <strong>Robotics Engineering Technology</strong> student at Purdue on the ML Optimization track, with minors in CIT and Management and a certificate in Data Science.</p>
     <p class="ab-p">My work spans <strong>industrial robotics</strong>, <strong>AI development</strong>, and <strong>data engineering</strong> — from programming Fanuc and Yamaha robots, to building full-stack AI tools, to humanoid robotics research.</p>
   </div>
 </section>
 
-<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0;display:grid;grid-template-columns:1fr 360px;">
-  <div style="padding:28px 64px;display:flex;align-items:center;gap:28px;border-right:1px solid var(--border);">
+<section style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0;">
+  <div style="padding:22px 64px;display:flex;align-items:center;gap:28px;">
     <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted2);white-space:nowrap;flex-shrink:0;">Currently building toward</div>
     <div style="display:flex;gap:8px;flex-wrap:wrap;">
       <span style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:rgba(255,255,255,0.7);font-size:12px;font-weight:500;padding:6px 14px;border-radius:100px;">🤖 Robotics ML</span>
@@ -397,11 +403,6 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
       <span style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:rgba(255,255,255,0.7);font-size:12px;font-weight:500;padding:6px 14px;border-radius:100px;">🔁 ROS2</span>
       <span style="background:rgba(255,255,255,0.06);border:1px solid var(--border);color:rgba(255,255,255,0.7);font-size:12px;font-weight:500;padding:6px 14px;border-radius:100px;">🔥 PyTorch</span>
     </div>
-  </div>
-  <div style="padding:28px 40px;display:flex;align-items:center;gap:12px;">
-    <a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank" style="display:flex;align-items:center;gap:7px;padding:9px 16px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:rgba(255,255,255,0.6);font-size:12px;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='rgba(232,98,26,0.5)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.09)';this.style.color='rgba(255,255,255,0.6)'">💼 LinkedIn</a>
-    <a href="https://github.com/shanvi-nevatia6" target="_blank" style="display:flex;align-items:center;gap:7px;padding:9px 16px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:rgba(255,255,255,0.6);font-size:12px;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='rgba(232,98,26,0.5)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.09)';this.style.color='rgba(255,255,255,0.6)'">⌨️ GitHub</a>
-    <a href="mailto:shanvinevatia@gmail.com" style="display:flex;align-items:center;gap:7px;padding:9px 16px;background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:rgba(255,255,255,0.6);font-size:12px;font-weight:500;transition:all 0.2s;" onmouseover="this.style.borderColor='rgba(232,98,26,0.5)';this.style.color='#fff'" onmouseout="this.style.borderColor='rgba(255,255,255,0.09)';this.style.color='rgba(255,255,255,0.6)'">✉️ Email</a>
   </div>
 </section>
 <section class="nav-cards">
@@ -526,7 +527,32 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
-            <div class="exp-icon" style="background:rgba(255,255,255,0.06);;">🏛️</div>
+            <div class="exp-icon" style="background:rgba(232,98,26,0.14);">🔬</div>
+            <div>
+              <div class="exp-role">Research Assistant</div>
+              <div class="exp-co">Center for AI &amp; Robotics Excellence in Medicine (CARE Lab) · Purdue University Edwardson School of Industrial Engineering</div>
+            </div>
+          </div>
+          <div class="exp-hr"><span class="badge badge-past">May 2026 – Present</span><div class="exp-chev">⌄</div></div>
+        </div>
+        <div class="exp-body"><div class="exp-divider"></div><div class="exp-inner">
+          <ul>
+            <li>Conducted systematic literature reviews on AI and surgical robotics, synthesizing 20+ papers to support active research initiatives at the lab</li>
+            <li>Performed data collection, cleaning, and analysis using Python and Excel, maintaining structured datasets for ongoing robotics research projects</li>
+            <li>Developed and designed research presentations and slide decks in PowerPoint for consortium meetings and academic/industry audiences</li>
+            <li>Coordinated lab events and consortium logistics, managing communication across faculty, graduate researchers, and 5+ external partner organizations</li>
+            <li>Maintained administrative records and research documentation, ensuring smooth operation of lab workflows across multiple concurrent projects</li>
+          </ul>
+          <div class="<div class="exp-tags"><span class="tag">Research</span><span class="tag">Python</span><span class="tag">Data Analysis</span><span class="tag">PowerPoint</span><span class="tag">Medical Robotics</span><span class="tag">Excel</span></div>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="exp-block reveal">
+      <div class="exp-card">
+        <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
+          <div class="exp-hl">
+            <div class="exp-icon" style="background:rgba(255,255,255,0.06);">🏛️</div>
             <div>
               <div class="exp-role">SOS Administrator</div>
               <div class="exp-co">University Residences · Purdue University</div>
@@ -536,12 +562,12 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
         </div>
         <div class="exp-body"><div class="exp-divider"></div><div class="exp-inner">
           <ul>
-            <li>Resolving 10+ student and faculty inquiries daily; trained and onboarded new administrative staff</li>
-            <li>Managing and processing data for 55,000+ students and faculty in compliance with university policies</li>
-            <li>Teaching and grading 200+ students covering physics, circuit prototyping, SolidWorks CAD, and data analysis</li>
-            <li>Providing detailed feedback on assignments, quizzes, and exams to strengthen problem-solving skills</li>
+            <li>Resolved 10+ student and faculty inquiries daily, demonstrating problem solving, delivering efficient solutions and enhancing office responsiveness</li>
+            <li>Trained and assisted new administrative staff, improving onboarding efficiency and team productivity</li>
+            <li>Processed, organized and managed data of 55,000+ students and faculty, while complying with University policies</li>
+            <li>Facilitated collaboration between different departments, optimizing workflow and communication efficiency</li>
           </ul>
-          <div class="exp-tags"><span class="tag">Administration</span><span class="tag">Data Management</span><span class="tag">Teaching</span><span class="tag">SolidWorks</span><span class="tag">200+ students</span></div>
+          <div class="exp-tags"><span class="tag">Administration</span><span class="tag">Data Management</span></div>
         </div></div>
       </div>
     </div>
@@ -549,23 +575,20 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
-            <div class="exp-icon" style="background:rgba(255,255,255,0.06);;">🎓</div>
+            <div class="exp-icon" style="background:rgba(255,255,255,0.06);">🎓</div>
             <div>
               <div class="exp-role">Undergraduate Teaching Assistant</div>
               <div class="exp-co">Gateway to Engineering Technology · Purdue</div>
-              <div class="exp-loc">Digital Engineering &amp; AI Firm</div>
             </div>
           </div>
-          <div class="exp-hr"><span class="badge badge-past">Aug – Dec 2025</span><div class="exp-chev">⌄</div></div>
+          <div class="exp-hr"><span class="badge badge-past">Aug 2025 – Dec 2025</span><div class="exp-chev">⌄</div></div>
         </div>
         <div class="exp-body"><div class="exp-divider"></div><div class="exp-inner">
           <ul>
-            <li>Teaching and grading 200+ students covering physics, circuit prototyping, SolidWorks CAD, and data analysis</li>
+            <li>Teaching and grading 200+ students covering physics, circuit prototyping, SolidWorks CAD, and data analysis (ENGT 182)</li>
             <li>Providing detailed feedback on assignments, quizzes, and exams to strengthen problem-solving skills</li>
-            <li>Python, R, and SQL for data manipulation, visualization, and evaluation on industry-relevant problems</li>
-            <li>Building statistical models that drive decision-making for real-world data challenges</li>
           </ul>
-          <div class="exp-tags"><span class="tag">Teaching</span><span class="tag">SolidWorks</span><span class="tag">200+ students</span><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">Statistics</span></div>
+          <div class="exp-tags"><span class="tag">Teaching</span><span class="tag">SolidWorks</span><span class="tag">200+ students</span></div>
         </div></div>
       </div>
     </div>
@@ -573,26 +596,21 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
-            <div class="exp-icon" style="background:rgba(255,255,255,0.06);;">📊</div>
+            <div class="exp-icon" style="background:rgba(255,255,255,0.06);">📊</div>
             <div>
               <div class="exp-role">Programmer</div>
               <div class="exp-co">The Data Mine · Purdue University</div>
-              <div class="exp-loc">Digital Engineering &amp; AI Firm</div>
             </div>
           </div>
           <div class="exp-hr"><span class="badge badge-past">Aug 2024 – Dec 2025</span><div class="exp-chev">⌄</div></div>
         </div>
         <div class="exp-body"><div class="exp-divider"></div><div class="exp-inner">
           <ul>
-            <li>Python, R, and SQL for data manipulation, visualization, and evaluation on industry-relevant problems</li>
-            <li>Building statistical models that drive decision-making for real-world data challenges</li>
-            <li>Built full-stack AI chatbot (Python, FastAPI, Tkinter) across 10+ file types with 80%+ extraction accuracy</li>
-            <li>Evaluated GPT-4o, Claude, Gemini, and LLaMA across 30+ prompt scenarios — 60% accuracy boost, 40% faster responses</li>
-            <li>Designed data summarization pipeline reducing processing time by 60% for files exceeding 1M rows</li>
-            <li>Engineered multi-user support across 50+ test sessions; reduced session load time by 60%</li>
-            <li>Built prompt engineering logic injecting contextual summaries, cutting irrelevant responses by 60%</li>
+            <li>Leveraged Python and R for data analysis, employing techniques in data manipulation, visualization, and evaluation to drive insights</li>
+            <li>Collaborated with teams to address real-world data challenges, analyzing extensive datasets and formulating impactful solutions</li>
+            <li>Engineered statistical models and strategies to address industry-relevant problems, optimizing outcomes and enhancing decision-making processes</li>
           </ul>
-          <div class="exp-tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">Statistics</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LLMs</span><span class="tag">Tkinter</span><span class="tag">Pandas</span><span class="tag">OpenAI API</span></div>
+          <div class="exp-tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">Statistics</span></div>
         </div></div>
       </div>
     </div>
@@ -600,7 +618,7 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
       <div class="exp-card open">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
-            <div class="exp-icon" style="background:rgba(232,98,26,0.14);;">🤖</div>
+            <div class="exp-icon" style="background:rgba(232,98,26,0.14);">🤖</div>
             <div>
               <div class="exp-role">Applied AI Developer Intern</div>
               <div class="exp-co">Kairos Technologies</div>
@@ -615,12 +633,8 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
             <li>Evaluated GPT-4o, Claude, Gemini, and LLaMA across 30+ prompt scenarios — 60% accuracy boost, 40% faster responses</li>
             <li>Designed data summarization pipeline reducing processing time by 60% for files exceeding 1M rows</li>
             <li>Engineered multi-user support across 50+ test sessions; reduced session load time by 60%</li>
-            <li>Built prompt engineering logic injecting contextual summaries, cutting irrelevant responses by 60%</li>
-            <li>Debugged software and rectified syntax and logic errors across multiple product lines</li>
-            <li>Documented client requirements through market research and interviews; built databases and queries</li>
-            <li>Conducted competitor benchmarking and submitted product improvement reports</li>
           </ul>
-          <div class="exp-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LLMs</span><span class="tag">Tkinter</span><span class="tag">Pandas</span><span class="tag">OpenAI API</span><span class="tag">Software Dev</span><span class="tag">Debugging</span><span class="tag">Databases</span></div>
+          <div class="exp-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LLMs</span><span class="tag">Tkinter</span><span class="tag">Pandas</span><span class="tag">OpenAI API</span></div>
         </div></div>
       </div>
     </div>
@@ -628,7 +642,7 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
-            <div class="exp-icon" style="background:rgba(255,255,255,0.06);;">🖥️</div>
+            <div class="exp-icon" style="background:rgba(255,255,255,0.06);">🖥️</div>
             <div>
               <div class="exp-role">Developer Intern</div>
               <div class="exp-co">Lee and Nee Software · IT Firm</div>
@@ -641,11 +655,8 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
             <li>Debugged software and rectified syntax and logic errors across multiple product lines</li>
             <li>Documented client requirements through market research and interviews; built databases and queries</li>
             <li>Conducted competitor benchmarking and submitted product improvement reports</li>
-            <li>Designed and administered questionnaires to evaluate stress factors, collecting insights from 50+ respondents</li>
-            <li>Leveraged Python and Pandas for data manipulation, visualization, and analysis</li>
-            <li>Presented findings with infographics, highlighting key issues and recommendations</li>
           </ul>
-          <div class="exp-tags"><span class="tag">Software Dev</span><span class="tag">Debugging</span><span class="tag">Databases</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Research</span><span class="tag">Data Viz</span></div>
+          <div class="exp-tags"><span class="tag">Software Dev</span><span class="tag">Debugging</span><span class="tag">Databases</span></div>
         </div></div>
       </div>
     </div>
@@ -653,7 +664,7 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
-            <div class="exp-icon" style="background:rgba(255,255,255,0.06);;">💻</div>
+            <div class="exp-icon" style="background:rgba(255,255,255,0.06);">💻</div>
             <div>
               <div class="exp-role">Research Intern</div>
               <div class="exp-co">Funcode · IT Start-up</div>
@@ -666,11 +677,8 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
             <li>Designed and administered questionnaires to evaluate stress factors, collecting insights from 50+ respondents</li>
             <li>Leveraged Python and Pandas for data manipulation, visualization, and analysis</li>
             <li>Presented findings with infographics, highlighting key issues and recommendations</li>
-            <li>Selected as an Accelerator Program Mentee — receiving structured mentorship in applied ML research, project scoping, and technical execution</li>
-            <li>Implementing supervised ML models with feature engineering and evaluation for a robotics-focused project (in progress)</li>
-            <li>Collaborating with peers on model evaluation pipelines and iterating on project design with mentor feedback</li>
           </ul>
-          <div class="exp-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Research</span><span class="tag">Data Viz</span><span class="tag">ML</span><span class="tag">Supervised Learning</span><span class="tag">Feature Engineering</span><span class="tag">Robotics</span></div>
+          <div class="exp-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Research</span><span class="tag">Data Viz</span></div>
         </div></div>
       </div>
     </div>
@@ -684,11 +692,8 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
-            <div class="exp-icon" style="background:rgba(232,98,26,0.14);;">⚡</div>
-            <div>
-              <div class="exp-role">Accelerator Program Mentee</div>
-              <div class="exp-co">ML@Purdue · Purdue University</div>
-            </div>
+            <div class="exp-icon" style="background:rgba(232,98,26,0.14);">⚡</div>
+            <div><div class="exp-role">Accelerator Program Mentee</div><div class="exp-co">ML@Purdue · Purdue University</div></div>
           </div>
           <div class="exp-hr"><span class="badge badge-past">Jan 2026 – Present</span><div class="exp-chev">⌄</div></div>
         </div>
@@ -697,23 +702,18 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
             <li>Selected as an Accelerator Program Mentee — receiving structured mentorship in applied ML research, project scoping, and technical execution</li>
             <li>Implementing supervised ML models with feature engineering and evaluation for a robotics-focused project (in progress)</li>
             <li>Collaborating with peers on model evaluation pipelines and iterating on project design with mentor feedback</li>
-            <li>Mentoring underrepresented students in STEM, providing guidance on academic paths, internships, and technical skill-building</li>
-            <li>Supporting gender equity and representation through community events, workshops, and networking across engineering and CS at Purdue</li>
-            <li>Connecting members with industry professionals and research opportunities in robotics, ML, and software</li>
           </ul>
-          <div class="exp-tags"><span class="tag">ML</span><span class="tag">Supervised Learning</span><span class="tag">Feature Engineering</span><span class="tag">Robotics</span><span class="tag">Community</span><span class="tag">STEM Equity</span></div>
+          <div class="exp-tags"><span class="tag">ML</span><span class="tag">Supervised Learning</span><span class="tag">Feature Engineering</span><span class="tag">Robotics</span></div>
         </div></div>
       </div>
     </div>
+
     <div class="exp-block reveal">
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
-            <div class="exp-icon" style="background:rgba(255,255,255,0.06);;">👩‍💻</div>
-            <div>
-              <div class="exp-role">Mentor</div>
-              <div class="exp-co">Women in Technology · Purdue University</div>
-            </div>
+            <div class="exp-icon" style="background:rgba(255,255,255,0.06);">👩‍💻</div>
+            <div><div class="exp-role">Mentor</div><div class="exp-co">Women in Technology · Purdue University</div></div>
           </div>
           <div class="exp-hr"><span class="badge badge-past">Aug 2025 – Present</span><div class="exp-chev">⌄</div></div>
         </div>
@@ -722,23 +722,18 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
             <li>Mentoring underrepresented students in STEM, providing guidance on academic paths, internships, and technical skill-building</li>
             <li>Supporting gender equity and representation through community events, workshops, and networking across engineering and CS at Purdue</li>
             <li>Connecting members with industry professionals and research opportunities in robotics, ML, and software</li>
-            <li>Developing algorithms for humanoid robot control systems ensuring precise movement and coordination</li>
-            <li>Programming sensor systems to detect and prevent malfunctions in dynamic environments</li>
-            <li>Collaborating with hardware team to synchronize software and mechanical systems</li>
           </ul>
-          <div class="exp-tags"><span class="tag">Community</span><span class="tag">STEM Equity</span><span class="tag">C++</span><span class="tag">Robotics</span><span class="tag">Sensors</span><span class="tag">Control Systems</span></div>
+          <div class="exp-tags"><span class="tag">Mentorship</span><span class="tag">Community</span><span class="tag">STEM Equity</span></div>
         </div></div>
       </div>
     </div>
+
     <div class="exp-block reveal">
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
-            <div class="exp-icon" style="background:rgba(255,255,255,0.06);;">🦾</div>
-            <div>
-              <div class="exp-role">Software Sub-Team Member</div>
-              <div class="exp-co">Humanoid Robotics Club · Purdue University</div>
-            </div>
+            <div class="exp-icon" style="background:rgba(255,255,255,0.06);">🦾</div>
+            <div><div class="exp-role">Software Sub-Team Member</div><div class="exp-co">Humanoid Robotics Club · Purdue University</div></div>
           </div>
           <div class="exp-hr"><span class="badge badge-past">Aug 2024 – May 2025</span><div class="exp-chev">⌄</div></div>
         </div>
@@ -747,24 +742,18 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
             <li>Developing algorithms for humanoid robot control systems ensuring precise movement and coordination</li>
             <li>Programming sensor systems to detect and prevent malfunctions in dynamic environments</li>
             <li>Collaborating with hardware team to synchronize software and mechanical systems</li>
-            <li>Founded a technology-driven sustainable fashion initiative combining environmental awareness with community action</li>
-            <li>Spread awareness about the environmental costs of textiles and the importance of reuse and recycling</li>
-            <li>Collected 500+ clothing items and donated them to local shelters, encouraging community members to contribute unused pieces</li>
-            <li>Enrolled 500+ community members who actively participated in closet swaps and donation drives</li>
           </ul>
-          <div class="exp-tags"><span class="tag">C++</span><span class="tag">Robotics</span><span class="tag">Sensors</span><span class="tag">Control Systems</span><span class="tag">Founder</span><span class="tag">Sustainability</span><span class="tag">Community</span><span class="tag">500+ Members</span></div>
+          <div class="exp-tags"><span class="tag">C++</span><span class="tag">Robotics</span><span class="tag">Sensors</span><span class="tag">Control Systems</span></div>
         </div></div>
       </div>
     </div>
+
     <div class="exp-block reveal">
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
             <div class="exp-icon" style="background:rgba(255,255,255,0.06);">👗</div>
-            <div>
-              <div class="exp-role">Founder</div>
-              <div class="exp-co">The Tech Closet</div>
-            </div>
+            <div><div class="exp-role">Founder</div><div class="exp-co">The Tech Closet · Sustainable Fashion Initiative</div></div>
           </div>
           <div class="exp-hr"><span class="badge badge-past">Sep 2022 – Jan 2025</span><div class="exp-chev">⌄</div></div>
         </div>
@@ -773,25 +762,18 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
             <li>Founded a technology-driven sustainable fashion initiative combining environmental awareness with community action</li>
             <li>Spread awareness about the environmental costs of textiles and the importance of reuse and recycling</li>
             <li>Collected 500+ clothing items and donated them to local shelters, encouraging community members to contribute unused pieces</li>
-            <li>Enrolled 500+ community members who actively participated in closet swaps and donation drives</li>
-            <li>Launched initiative spreading cybersecurity awareness via social media, blogs, and podcasts — reaching 100+ community members</li>
-            <li>Conducted 4 virtual and 2 on-site workshops on cybersecurity and cyberbullying for 50+ students aged 12–18</li>
-            <li>Developed cyber-safety helpline with 10+ volunteers, helping 500+ people with real-time queries</li>
-            <li>Installed antivirus and firewall configurations on 20+ devices for senior citizens</li>
           </ul>
-          <div class="exp-tags"><span class="tag">Founder</span><span class="tag">Sustainability</span><span class="tag">Community</span><span class="tag">500+ Members</span><span class="tag">Founder</span><span class="tag">Non-Profit</span><span class="tag">Cybersecurity</span></div>
+          <div class="exp-tags"><span class="tag">Founder</span><span class="tag">Sustainability</span><span class="tag">Community</span><span class="tag">500+ Members</span></div>
         </div></div>
       </div>
     </div>
+
     <div class="exp-block reveal">
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
             <div class="exp-icon" style="background:rgba(255,255,255,0.06);">🛡️</div>
-            <div>
-              <div class="exp-role">Founder</div>
-              <div class="exp-co">CyberShield</div>
-            </div>
+            <div><div class="exp-role">Founder</div><div class="exp-co">CyberShield · Cybersecurity Non-Profit</div></div>
           </div>
           <div class="exp-hr"><span class="badge badge-past">Jun 2023 – Jul 2024</span><div class="exp-chev">⌄</div></div>
         </div>
@@ -801,23 +783,18 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
             <li>Conducted 4 virtual and 2 on-site workshops on cybersecurity and cyberbullying for 50+ students aged 12–18</li>
             <li>Developed cyber-safety helpline with 10+ volunteers, helping 500+ people with real-time queries</li>
             <li>Installed antivirus and firewall configurations on 20+ devices for senior citizens</li>
-            <li>Managed social media for 7+ non-profits focused on gender equality, mental health, and menstrual equity</li>
-            <li>Built a team of 4 and created 150+ content pieces and 50+ blogs</li>
-            <li>Tracked and analyzed engagement data — improving followers by 30% and community reach by 20% on average</li>
           </ul>
-          <div class="exp-tags"><span class="tag">Founder</span><span class="tag">Non-Profit</span><span class="tag">Cybersecurity</span><span class="tag">Founder</span><span class="tag">Social Media</span><span class="tag">Data Analytics</span><span class="tag">Content</span></div>
+          <div class="exp-tags"><span class="tag">Founder</span><span class="tag">Non-Profit</span><span class="tag">Cybersecurity</span></div>
         </div></div>
       </div>
     </div>
+
     <div class="exp-block reveal">
       <div class="exp-card">
         <div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')">
           <div class="exp-hl">
             <div class="exp-icon" style="background:rgba(255,255,255,0.06);">📢</div>
-            <div>
-              <div class="exp-role">Founder</div>
-              <div class="exp-co">Digital Provide</div>
-            </div>
+            <div><div class="exp-role">Founder</div><div class="exp-co">Digital Provide · Digital Marketing for Non-Profits</div></div>
           </div>
           <div class="exp-hr"><span class="badge badge-past">May 2020 – Jul 2024</span><div class="exp-chev">⌄</div></div>
         </div>
@@ -834,7 +811,7 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
 
   </div>
 
-
+</div>
 </div>
 <footer><span>© 2026 Shanvi Nevatia</span><span><a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/shanvi-nevatia6" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank">Resume</a> &nbsp;·&nbsp; <a href="mailto:shanvinevatia@gmail.com">Email</a></span></footer>
 </div>
@@ -842,73 +819,118 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
 <div class="page" id="page-projects">
 <div class="page-header"><div class="page-header-grid"></div>
   <div class="eyebrow">Portfolio</div>
-  <h1>Projects &amp; <em>Work</em></h1>
-  <p class="page-header-sub">Technical builds, community initiatives, and things I'm proud of.</p>
+  <h1>Projects &amp; <em>Research</em></h1>
+  <p class="page-header-sub">Technical builds and published research.</p>
 </div>
 <div class="content">
 
-  <div class="exp-section-label reveal">Technical Projects</div>
-  <div class="filter-row" style="margin-top:8px;">
-    <button class="fbtn active" onclick="filt('all',this)">All</button>
-    <button class="fbtn" onclick="filt('robotics',this)">Robotics</button>
-    <button class="fbtn" onclick="filt('ai',this)">AI &amp; ML</button>
-    <button class="fbtn" onclick="filt('software',this)">Software</button>
+  <!-- TAB SWITCHER -->
+  <div style="display:flex;gap:0;margin-bottom:40px;border:1px solid var(--border);border-radius:12px;overflow:hidden;width:fit-content;">
+    <button id="tab-research" onclick="switchTab('research')" style="padding:12px 32px;font-size:13px;font-weight:600;font-family:'Manrope',sans-serif;letter-spacing:0.05em;cursor:pointer;border:none;background:var(--orange);color:var(--white);transition:all 0.2s;">Research</button>
+    <button id="tab-technical" onclick="switchTab('technical')" style="padding:12px 32px;font-size:13px;font-weight:500;font-family:'Manrope',sans-serif;letter-spacing:0.05em;cursor:pointer;border:none;background:var(--bg2);color:var(--muted);transition:all 0.2s;">Technical Projects</button>
   </div>
-  <div class="proj-grid">
-    <div class="pcard wide reveal" data-cat="robotics">
-      <div class="pvisual">🦾</div>
-      <div class="pcontent">
-        <div class="pn">001</div>
-        <div class="ptitle">Fanuc Metal Sorter</div>
-        <p class="pdesc">Fully automated metal sorting system using a Fanuc industrial robot. Integrated metal detection sensor — robot picks up, identifies, and places objects accordingly. Embedded lights and I/O for real-time feedback. Zero manual intervention.</p>
-        <div class="ptags"><span class="tag">Fanuc Robot</span><span class="tag">Automation</span><span class="tag">Metal Sensing</span><span class="tag">Embedded I/O</span></div>
-        <div class="pfoot"><span style="font-size:12px;color:var(--muted);">Team project · Fully automated</span><span class="tag orange">Hardware</span></div>
+
+  <!-- RESEARCH TAB -->
+  <div id="proj-tab-research">
+    <div class="exp-section-label" style="margin-top:0;">Research &amp; Publications</div>
+    <p style="font-size:14px;color:var(--muted);margin-bottom:32px;line-height:1.7;">Published research spanning robotics, AI applications, and education.</p>
+
+    <div style="display:flex;flex-direction:column;gap:0;">
+      <div class="pub-row" style="padding:22px 0;">
+        <span class="pub-year">2023</span>
+        <div style="flex:1;">
+          <div class="pub-title" style="margin-bottom:6px;">From Sci-Fi to Reality: The Rise of Chemically-Driven Soft Robots</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Explores the intersection of chemistry and robotics — examining how chemically-actuated soft robots are moving from science fiction toward viable real-world applications in medicine, manufacturing, and beyond.</div>
+        </div>
+        <span class="pub-badge">Natural Sciences Journal</span>
       </div>
-    </div>
-    <div class="pcard reveal" data-cat="robotics">
-      <div class="pn">002</div>
-      <div class="ptitle">Yamaha Pick &amp; Place</div>
-      <p class="pdesc">Programmed a Yamaha industrial robot for precise pick-and-place operations — accurate positioning, motion planning, and repeatable execution in a controlled environment.</p>
-      <div class="ptags"><span class="tag">Yamaha Robot</span><span class="tag">Motion Planning</span><span class="tag">Automation</span></div>
-      <div class="pfoot"><span style="font-size:12px;color:var(--muted);">Industrial robotics</span><span class="tag orange">Hardware</span></div>
-    </div>
-    <div class="pcard wide reveal" data-cat="ai">
-      <div class="pvisual">🧠</div>
-      <div class="pcontent">
-        <div class="pn">003</div>
-        <div class="ptitle">AI Data Chatbot</div>
-        <p class="pdesc">Full-stack AI tool for chat-style conversations with datasets across 10+ file types. Evaluated GPT-4o, Claude, Gemini, and LLaMA — integrated best performer, achieving 60% accuracy boost and 40% faster responses. Supports 7+ concurrent users with session history.</p>
-        <div class="ptags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LLMs</span><span class="tag">Tkinter</span><span class="tag">Pandas</span></div>
-        <div class="pfoot"><a href="https://github.com/shanvi-nevatia6" target="_blank" class="plink">GitHub →</a><span class="tag orange">80%+ accuracy</span></div>
+      <div class="pub-row" style="padding:22px 0;">
+        <span class="pub-year">2023</span>
+        <div style="flex:1;">
+          <div class="pub-title" style="margin-bottom:6px;">Benefits &amp; Uses of AI in the Fashion Industry</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Examines how artificial intelligence is transforming fashion — from trend forecasting and supply chain optimization to personalized styling and sustainable production.</div>
+        </div>
+        <span class="pub-badge">IJARESM</span>
       </div>
-    </div>
-    <div class="pcard reveal" data-cat="software">
-      <div class="pn">004</div>
-      <div class="ptitle">MedConnect</div>
-      <p class="pdesc">Healthcare app with symptom tracking, vital monitoring, and appointment scheduling. Special Mention at Neerja Modi Hackathon — top 15 of 200 submissions.</p>
-      <div class="ptags"><span class="tag">Python</span><span class="tag">Healthcare</span><span class="tag">GUI</span></div>
-      <div class="pfoot"><a href="https://github.com/shanvi-nevatia6" target="_blank" class="plink">GitHub →</a><span style="font-size:12px;color:var(--muted);">Top 15 / 200</span></div>
-    </div>
-    <div class="pcard reveal" data-cat="robotics">
-      <div class="pn">005</div>
-      <div class="ptitle">F1 Circuit Race System</div>
-      <p class="pdesc">Led a 10-member team to design and build three RC cars for an F1-style circuit. Real-time sensing with Arduino, lasers, and LDRs for accurate instant race results.</p>
-      <div class="ptags"><span class="tag">Arduino</span><span class="tag">Python</span><span class="tag">Sensors</span><span class="tag gold">Team Lead</span></div>
+      <div class="pub-row" style="padding:22px 0;">
+        <span class="pub-year">2023</span>
+        <div style="flex:1;">
+          <div class="pub-title" style="margin-bottom:6px;">Advanced Personalized Learning in Developing Countries</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.6;">Investigates how adaptive learning technologies and AI-driven platforms can bridge the education gap in low-resource settings, improving access and outcomes.</div>
+        </div>
+        <span class="pub-badge">IJARESM</span>
+      </div>
     </div>
   </div>
 
-  <div style="margin-top:56px;">
-    <div class="exp-section-label">Research &amp; Publications</div>
-    <p style="font-size:14px;color:var(--muted);margin-bottom:28px;line-height:1.7;">Published research spanning robotics, AI applications, and education.</p>
-    <div class="pub-row"><span class="pub-year">2023</span><span class="pub-title">From Sci-Fi to Reality: The Rise of Chemically-Driven Soft Robots</span><span class="pub-badge">Natural Sciences Journal</span></div>
-    <div class="pub-row"><span class="pub-year">2023</span><span class="pub-title">Benefits &amp; Uses of AI in the Fashion Industry</span><span class="pub-badge">IJARESM</span></div>
-    <div class="pub-row"><span class="pub-year">2023</span><span class="pub-title">Advanced Personalized Learning in Developing Countries</span><span class="pub-badge">IJARESM</span></div>
+  <!-- TECHNICAL PROJECTS TAB -->
+  <div id="proj-tab-technical" style="display:none;">
+    <div class="exp-section-label" style="margin-top:0;">Technical Projects</div>
+    <div class="proj-grid" style="margin-top:24px;">
+
+      <div class="pcard wide">
+        <div class="pvisual">🦾</div>
+        <div class="pcontent">
+          <div class="pn" style="display:flex;justify-content:space-between;">001 <span>2026</span></div>
+          <div class="ptitle">Fanuc Metal Sorter</div>
+          <p class="pdesc">Fully automated metal sorting system using a Fanuc industrial robot. Integrated metal detection sensor — robot picks up, identifies, and places objects accordingly. Embedded lights and I/O for real-time feedback. Zero manual intervention.</p>
+          <div class="ptags"><span class="tag">Fanuc Robot</span><span class="tag">Automation</span><span class="tag">Metal Sensing</span><span class="tag">Embedded I/O</span></div>
+          <div class="pfoot"><span style="font-size:12px;color:var(--muted);">Team project · Fully automated</span><span class="tag orange">Hardware</span></div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pn" style="display:flex;justify-content:space-between;">002 <span>2026</span></div>
+        <div class="ptitle">Yamaha Pick &amp; Place</div>
+        <p class="pdesc">Programmed a Yamaha industrial robot for precise pick-and-place operations — accurate positioning, motion planning, and repeatable execution in a controlled environment.</p>
+        <div class="ptags"><span class="tag">Yamaha Robot</span><span class="tag">Motion Planning</span><span class="tag">Automation</span></div>
+        <div class="pfoot"><span style="font-size:12px;color:var(--muted);">Industrial robotics</span><span class="tag orange">Hardware</span></div>
+      </div>
+
+      <div class="pcard">
+        <div class="pn" style="display:flex;justify-content:space-between;">003 <span>2023</span></div>
+        <div class="ptitle">MedConnect</div>
+        <p class="pdesc">Healthcare app with symptom tracking, vital monitoring, and appointment scheduling. Special Mention at Neerja Modi Hackathon — top 15 of 200 submissions.</p>
+        <div class="ptags"><span class="tag">Python</span><span class="tag">Healthcare</span><span class="tag">GUI</span></div>
+        <div class="pfoot"><span style="font-size:12px;color:var(--muted);">Top 15 / 200</span></div>
+      </div>
+
+      <div class="pcard wide">
+        <div class="pvisual">🏎️</div>
+        <div class="pcontent">
+          <div class="pn" style="display:flex;justify-content:space-between;">004 <span>2024</span></div>
+          <div class="ptitle">F1 Circuit Race System</div>
+          <p class="pdesc">Led a 10-member team to design and build three RC cars for an F1-style circuit. Real-time sensing with Arduino, lasers, and LDRs for accurate instant race results.</p>
+          <div class="ptags"><span class="tag">Arduino</span><span class="tag">Python</span><span class="tag">Sensors</span></div>
+          <div class="pfoot"><span style="font-size:12px;color:var(--muted);">Team Lead · 10 members</span><span class="tag gold">Team Lead</span></div>
+        </div>
+      </div>
+
+      <div class="pcard">
+        <div class="pn" style="display:flex;justify-content:space-between;">005 <span>2026</span></div>
+        <div class="ptitle">AI Literacy Website</div>
+        <p class="pdesc">Prototype website pitching an AI Literacy initiative, built as a TECH 120 project. Designed to make AI concepts accessible and engaging for general audiences.</p>
+        <div class="ptags"><span class="tag">Web Design</span><span class="tag">AI Education</span><span class="tag">Prototype</span></div>
+        <div class="pfoot"><span style="font-size:12px;color:var(--muted);">TECH 120 · Purdue</span></div>
+      </div>
+
+      <div class="pcard wide">
+        <div class="pvisual">🎮</div>
+        <div class="pcontent">
+          <div class="pn" style="display:flex;justify-content:space-between;">006 <span>2020</span></div>
+          <div class="ptitle">Python Game Suite</div>
+          <p class="pdesc">Three games — Number Guessing Game, Bomb Defuse, and Tic Tac Toe — with increasing difficulty levels, prizes, and profile storage. Received praise for fast response time, attractive GUI, and functionality.</p>
+          <div class="ptags"><span class="tag">Python</span><span class="tag">GUI</span><span class="tag">Game Dev</span><span class="tag">Profile Storage</span></div>
+        </div>
+      </div>
+
+    </div>
   </div>
+
 </div>
 <footer><span>© 2026 Shanvi Nevatia</span><span><a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/shanvi-nevatia6" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank">Resume</a> &nbsp;·&nbsp; <a href="mailto:shanvinevatia@gmail.com">Email</a></span></footer>
 </div>
 
-<!-- ══════════ SKILLS ══════════ -->
 <div class="page" id="page-skills">
 <div class="page-header"><div class="page-header-grid"></div>
   <div class="eyebrow">Toolkit</div>
@@ -1058,7 +1080,7 @@ document.querySelectorAll('#page-home .reveal, #page-home .reveal-l').forEach(el
 triggerReveals();
 
 // Typing animation
-const lines=["A Robotics Engineer.","A Boilermaker.","An ML Enthusiast.","A Basketball Player.","An F1 Aficionado.","A Problem Solver.","Data-driven thinker.","An Innovator.","Engineer. Builder. Both."];
+const lines=["A Robotics Engineer.","A Boilermaker.","An ML Enthusiast.","An F1 Aficionado.","A Problem Solver.","Data-driven thinker.","An Innovator.","Engineer. Builder. Both."];
 let li=0,ci=0,typing=true,pause=0;
 const tel=document.getElementById('heroTyping');
 function typeStep(){
@@ -1073,6 +1095,16 @@ function typeStep(){
   }
 }
 setTimeout(typeStep,1100);
+
+
+function switchTab(tab) {
+  document.getElementById('proj-tab-research').style.display = tab === 'research' ? 'block' : 'none';
+  document.getElementById('proj-tab-technical').style.display = tab === 'technical' ? 'block' : 'none';
+  document.getElementById('tab-research').style.background = tab === 'research' ? 'var(--orange)' : 'var(--bg2)';
+  document.getElementById('tab-research').style.color = tab === 'research' ? 'var(--white)' : 'var(--muted)';
+  document.getElementById('tab-technical').style.background = tab === 'technical' ? 'var(--orange)' : 'var(--bg2)';
+  document.getElementById('tab-technical').style.color = tab === 'technical' ? 'var(--white)' : 'var(--muted)';
+}
 
 function filt(cat,btn){
   document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));
@@ -1091,5 +1123,6 @@ setTimeout(()=>{
   });
 },100);
 </script>
+</div><!-- end page-container -->
 </body>
 </html>
