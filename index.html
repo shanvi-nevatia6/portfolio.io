@@ -31,8 +31,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;ali
 .nav-cta:hover{background:var(--orange2);}
 
 /* PAGES */
-.page{display:none;position:absolute;top:0;left:0;right:0;}
-.page.active{display:block;position:relative;}
+.page{display:none !important;}
+.page.active{display:block !important;}
 
 /* SHARED */
 .page-header{padding:120px 64px 52px;border-bottom:1px solid var(--border);position:relative;overflow:hidden;}
@@ -299,10 +299,12 @@ footer a{color:var(--orange2);text-decoration:none;}footer a:hover{color:var(--o
   .vitals{grid-template-columns:1fr 1fr;}
 }
 
-/* Prevent page content bleed */
-.page{overflow:hidden;}
 
 body{overflow-x:hidden;}
+
+/* Hide footers in inactive pages */
+.page footer{display:none !important;}
+.page.active footer{display:flex !important;}
 </style>
 </head>
 <body>
@@ -411,7 +413,7 @@ body{overflow-x:hidden;}
   <div class="nc reveal" onclick="showPage('projects')"><div><div class="nc-tag">Portfolio</div><div class="nc-title">Projects</div></div><span class="nc-arrow">↗</span></div>
   <div class="nc reveal" onclick="showPage('skills')"><div><div class="nc-tag">Toolkit</div><div class="nc-title">Skills</div></div><span class="nc-arrow">↗</span></div>
 </section>
-<footer><span>© 2026 Shanvi Nevatia</span><span><a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/shanvi-nevatia6" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank">Resume</a> &nbsp;·&nbsp; <a href="mailto:shanvinevatia@gmail.com">Email</a></span></footer>
+
 </div>
 
 <!-- ══════════ ABOUT ══════════ -->
@@ -492,7 +494,7 @@ body{overflow-x:hidden;}
 
   
 </div>
-<footer><span>© 2026 Shanvi Nevatia</span><span><a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/shanvi-nevatia6" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank">Resume</a> &nbsp;·&nbsp; <a href="mailto:shanvinevatia@gmail.com">Email</a></span></footer>
+
 </div>
 
 <!-- ══════════ EXPERIENCE ══════════ -->
@@ -813,7 +815,7 @@ body{overflow-x:hidden;}
 
 </div>
 </div>
-<footer><span>© 2026 Shanvi Nevatia</span><span><a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/shanvi-nevatia6" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank">Resume</a> &nbsp;·&nbsp; <a href="mailto:shanvinevatia@gmail.com">Email</a></span></footer>
+
 </div>
 
 <div class="page" id="page-projects">
@@ -928,7 +930,7 @@ body{overflow-x:hidden;}
   </div>
 
 </div>
-<footer><span>© 2026 Shanvi Nevatia</span><span><a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/shanvi-nevatia6" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank">Resume</a> &nbsp;·&nbsp; <a href="mailto:shanvinevatia@gmail.com">Email</a></span></footer>
+
 </div>
 
 <div class="page" id="page-skills">
@@ -1017,7 +1019,7 @@ body{overflow-x:hidden;}
   </div>
 
 </div>
-<footer><span>© 2026 Shanvi Nevatia</span><span><a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/shanvi-nevatia6" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank">Resume</a> &nbsp;·&nbsp; <a href="mailto:shanvinevatia@gmail.com">Email</a></span></footer>
+
 </div>
 
 <!-- ══════════ CONTACT ══════════ -->
@@ -1044,7 +1046,7 @@ body{overflow-x:hidden;}
     </div>
   </div>
 </div>
-<footer><span>© 2026 Shanvi Nevatia</span><span><a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/shanvi-nevatia6" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank">Resume</a> &nbsp;·&nbsp; <a href="mailto:shanvinevatia@gmail.com">Email</a></span></footer>
+
 </div>
 
 <script>
@@ -1124,5 +1126,6 @@ setTimeout(()=>{
 },100);
 </script>
 </div><!-- end page-container -->
+<footer id="global-footer"><span>© 2026 Shanvi Nevatia</span><span><a href="https://www.linkedin.com/in/shanvi-nevatia/" target="_blank">LinkedIn</a> &nbsp;·&nbsp; <a href="https://github.com/shanvi-nevatia6" target="_blank">GitHub</a> &nbsp;·&nbsp; <a href="Shanvi_Nevatia_Resume_.pdf" target="_blank">Resume</a> &nbsp;·&nbsp; <a href="mailto:shanvinevatia@gmail.com">Email</a></span></footer>
 </body>
 </html>
