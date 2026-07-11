@@ -168,6 +168,8 @@ footer a{color:var(--orange2);text-decoration:none}
 .logo-item:hover{background:rgba(255,255,255,.04);border-color:var(--border2);z-index:1}
 .logo-item img{width:38px;height:38px;object-fit:contain}
 .lname{font-size:10px;color:var(--muted);text-align:center;letter-spacing:.02em}
+.logo-text,.logo-emoji{width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);color:var(--orange2);font-size:12px;font-weight:700;letter-spacing:.04em}
+.logo-emoji{color:var(--white);font-size:20px;font-weight:400;letter-spacing:0}
 .logo-item:hover .lname{color:var(--white)}
 .pill-grid{display:flex;flex-wrap:wrap;gap:8px}
 .sk-pill{display:inline-flex;align-items:center;gap:7px;background:var(--bg2);border:1px solid var(--border);border-radius:8px;padding:9px 14px;font-size:13px;color:var(--white);transition:.15s}
@@ -413,25 +415,137 @@ footer a{color:var(--orange2);text-decoration:none}
 
 <div class="page" id="page-skills">
 <div class="page-header"><div class="page-header-grid"></div><div class="eyebrow">Toolkit</div><h1>Skills &amp; <em>Technologies</em></h1><p class="page-header-sub">Built through real projects, internships, and coursework.</p></div>
+
 <div class="content">
-  <div class="skill-section"><div class="skill-sec-title"><span>Languages</span></div><div class="logos-grid">
-    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/><div class="lname">Python</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"/><div class="lname">C</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/><div class="lname">C++</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/><div class="lname">Java</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"/><div class="lname">SQL</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R"/><div class="lname">R</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB"/><div class="lname">MATLAB</div></div>
-  </div><div class="pill-grid" style="margin-top:16px"><div class="sk-pill"><div class="sk-pill-dot"></div>LaTeX</div><div class="sk-pill"><div class="sk-pill-dot"></div>Arduino</div><div class="sk-pill"><div class="sk-pill-dot"></div>PLC / Ladder Logic</div></div></div>
+  <div class="skill-section">
+    <div class="skill-sec-title"><span>Languages</span></div>
+    <div class="logos-grid">
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"/><div class="lname">Python</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"/><div class="lname">C</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++"/><div class="lname">C++</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"/><div class="lname">Java</div></div>
+      <div class="logo-item"><div class="logo-text">SQL</div><div class="lname">SQL</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R"/><div class="lname">R</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB"/><div class="lname">MATLAB</div></div>
+      <div class="logo-item"><div class="logo-text">TeX</div><div class="lname">LaTeX</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino"/><div class="lname">Arduino</div></div>
+      <div class="logo-item"><div class="logo-text">PLC</div><div class="lname">PLC / Ladder Logic</div></div>
+    </div>
+  </div>
 
-  <div class="skill-section"><div class="skill-sec-title"><span>Libraries &amp; Frameworks</span></div><div class="logos-grid">
-    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"/><div class="lname">NumPy</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"/><div class="lname">Pandas</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"/><div class="lname">PyTorch</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"/><div class="lname">FastAPI</div></div><div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg"/><div class="lname">Matplotlib</div></div><div class="logo-item"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg"/><div class="lname">Hugging Face</div></div><div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"/><div class="lname">OpenAI API</div></div>
-  </div><div class="pill-grid" style="margin-top:16px"><div class="sk-pill"><div class="sk-pill-dot"></div>GeoPandas</div><div class="sk-pill"><div class="sk-pill-dot"></div>Scikit-Learn</div><div class="sk-pill"><div class="sk-pill-dot"></div>Pydantic</div><div class="sk-pill"><div class="sk-pill-dot"></div>Tkinter</div><div class="sk-pill"><div class="sk-pill-dot"></div>REST APIs</div></div></div>
+  <div class="skill-section">
+    <div class="skill-sec-title"><span>Libraries &amp; Frameworks</span></div>
+    <div class="logos-grid">
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"/><div class="lname">NumPy</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"/><div class="lname">Pandas</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"/><div class="lname">PyTorch</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"/><div class="lname">FastAPI</div></div>
+      <div class="logo-item"><div class="logo-text">MPL</div><div class="lname">Matplotlib</div></div>
+      <div class="logo-item"><div class="logo-text">HF</div><div class="lname">Hugging Face</div></div>
+      <div class="logo-item"><div class="logo-text">AI</div><div class="lname">OpenAI API</div></div>
+      <div class="logo-item"><div class="logo-text">Geo</div><div class="lname">GeoPandas</div></div>
+      <div class="logo-item"><div class="logo-text">SK</div><div class="lname">Scikit-Learn</div></div>
+      <div class="logo-item"><div class="logo-text">PD</div><div class="lname">Pydantic</div></div>
+      <div class="logo-item"><div class="logo-text">TK</div><div class="lname">Tkinter</div></div>
+      <div class="logo-item"><div class="logo-text">API</div><div class="lname">REST APIs</div></div>
+    </div>
+  </div>
 
-  <div class="skill-section"><div class="skill-sec-title"><span>AI / Machine Learning</span></div><div class="pill-grid"><div class="sk-pill"><div class="sk-pill-dot"></div>Supervised Learning</div><div class="sk-pill"><div class="sk-pill-dot"></div>Feature Engineering</div><div class="sk-pill"><div class="sk-pill-dot"></div>Model Evaluation</div><div class="sk-pill"><div class="sk-pill-dot"></div>Time-Series Forecasting</div><div class="sk-pill"><div class="sk-pill-dot"></div>LLM Benchmarking</div><div class="sk-pill"><div class="sk-pill-dot"></div>Prompt Engineering</div><div class="sk-pill"><div class="sk-pill-dot"></div>NLP Concepts</div><div class="sk-pill"><div class="sk-pill-dot"></div>AI Agent Evaluation</div><div class="sk-pill"><div class="sk-pill-dot"></div>Retrieval Systems</div><div class="sk-pill"><div class="sk-pill-dot"></div>Applied Statistics</div><div class="sk-pill"><div class="sk-pill-dot"></div>Linear Algebra</div></div></div>
+  <div class="skill-section">
+    <div class="skill-sec-title"><span>AI / Machine Learning</span></div>
+    <div class="logos-grid">
+      <div class="logo-item"><div class="logo-emoji">🧠</div><div class="lname">Supervised Learning</div></div>
+      <div class="logo-item"><div class="logo-emoji">🧩</div><div class="lname">Feature Engineering</div></div>
+      <div class="logo-item"><div class="logo-emoji">📈</div><div class="lname">Model Evaluation</div></div>
+      <div class="logo-item"><div class="logo-emoji">⏱️</div><div class="lname">Time-Series Forecasting</div></div>
+      <div class="logo-item"><div class="logo-emoji">🤖</div><div class="lname">LLM Benchmarking</div></div>
+      <div class="logo-item"><div class="logo-emoji">💬</div><div class="lname">Prompt Engineering</div></div>
+      <div class="logo-item"><div class="logo-emoji">🗣️</div><div class="lname">NLP Concepts</div></div>
+      <div class="logo-item"><div class="logo-emoji">🧪</div><div class="lname">AI Agent Evaluation</div></div>
+      <div class="logo-item"><div class="logo-emoji">🔎</div><div class="lname">Retrieval Systems</div></div>
+      <div class="logo-item"><div class="logo-emoji">📊</div><div class="lname">Applied Statistics</div></div>
+      <div class="logo-item"><div class="logo-text">∑</div><div class="lname">Linear Algebra</div></div>
+    </div>
+  </div>
 
-  <div class="skill-section"><div class="skill-sec-title"><span>Data Engineering &amp; Visualization</span></div><div class="logos-grid"><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"/><div class="lname">PostgreSQL</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"/><div class="lname">JupyterLab</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg"/><div class="lname">GitHub Actions</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="opacity:.65;filter:hue-rotate(180deg)"/><div class="lname">Power BI</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="opacity:.65;filter:hue-rotate(250deg)"/><div class="lname">Tableau</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="opacity:.5;filter:hue-rotate(140deg)"/><div class="lname">SPSS</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"/><div class="lname">Supabase</div></div></div><div class="pill-grid" style="margin-top:16px"><div class="sk-pill"><div class="sk-pill-dot"></div>PostGIS</div><div class="sk-pill"><div class="sk-pill-dot"></div>Data Pipelines</div><div class="sk-pill"><div class="sk-pill-dot"></div>Data Validation</div><div class="sk-pill"><div class="sk-pill-dot"></div>Dashboarding</div><div class="sk-pill"><div class="sk-pill-dot"></div>Geospatial Data</div><div class="sk-pill"><div class="sk-pill-dot"></div>Data Storytelling</div></div></div>
+  <div class="skill-section">
+    <div class="skill-sec-title"><span>Data Engineering &amp; Visualization</span></div>
+    <div class="logos-grid">
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/><div class="lname">PostgreSQL</div></div>
+      <div class="logo-item"><div class="logo-text">GIS</div><div class="lname">PostGIS</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="JupyterLab"/><div class="lname">JupyterLab</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions"/><div class="lname">GitHub Actions</div></div>
+      <div class="logo-item"><div class="logo-text">BI</div><div class="lname">Power BI</div></div>
+      <div class="logo-item"><div class="logo-text">Tb</div><div class="lname">Tableau</div></div>
+      <div class="logo-item"><div class="logo-text">SPSS</div><div class="lname">SPSS</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase"/><div class="lname">Supabase</div></div>
+      <div class="logo-item"><div class="logo-emoji">🔁</div><div class="lname">Data Pipelines</div></div>
+      <div class="logo-item"><div class="logo-emoji">✅</div><div class="lname">Data Validation</div></div>
+      <div class="logo-item"><div class="logo-emoji">📊</div><div class="lname">Dashboarding</div></div>
+      <div class="logo-item"><div class="logo-emoji">🗺️</div><div class="lname">Geospatial Data</div></div>
+      <div class="logo-item"><div class="logo-emoji">📖</div><div class="lname">Data Storytelling</div></div>
+    </div>
+  </div>
 
-  <div class="skill-section"><div class="skill-sec-title"><span>Robotics &amp; Automation</span></div><div class="logos-grid"><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg"/><div class="lname">Arduino</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg"/><div class="lname">Sensor Integration</div></div><div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/SolidWorks_Logo.svg/200px-SolidWorks_Logo.svg.png" style="width:100%;height:38px;object-fit:contain"/><div class="lname">SolidWorks</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg"/><div class="lname">Siemens NX</div></div></div><div class="pill-grid" style="margin-top:16px"><div class="sk-pill"><div class="sk-pill-dot"></div>FANUC Robots</div><div class="sk-pill"><div class="sk-pill-dot"></div>Yamaha Robots</div><div class="sk-pill"><div class="sk-pill-dot"></div>Industrial Automation</div><div class="sk-pill"><div class="sk-pill-dot"></div>PLC Programming</div><div class="sk-pill"><div class="sk-pill-dot"></div>Ladder Logic</div><div class="sk-pill"><div class="sk-pill-dot"></div>Actuation &amp; Sensing</div><div class="sk-pill"><div class="sk-pill-dot"></div>Kinematics &amp; Dynamics</div><div class="sk-pill"><div class="sk-pill-dot"></div>Control Systems</div><div class="sk-pill"><div class="sk-pill-dot"></div>CAD Assemblies</div><div class="sk-pill"><div class="sk-pill-dot"></div>Studio 5000</div><div class="sk-pill"><div class="sk-pill-dot"></div>PLCnext Engineer</div><div class="sk-pill"><div class="sk-pill-dot"></div>EPLAN</div><div class="sk-pill"><div class="sk-pill-dot"></div>FactoryTalk</div></div></div>
+  <div class="skill-section">
+    <div class="skill-sec-title"><span>Robotics &amp; Automation</span></div>
+    <div class="logos-grid">
+      <div class="logo-item"><div class="logo-text">FNC</div><div class="lname">FANUC Robots</div></div>
+      <div class="logo-item"><div class="logo-text">YMH</div><div class="lname">Yamaha Robots</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino"/><div class="lname">Arduino</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt="Sensors"/><div class="lname">Sensor Integration</div></div>
+      <div class="logo-item"><div class="logo-text">SW</div><div class="lname">SolidWorks</div></div>
+      <div class="logo-item"><div class="logo-text">NX</div><div class="lname">Siemens NX</div></div>
+      <div class="logo-item"><div class="logo-emoji">🏭</div><div class="lname">Industrial Automation</div></div>
+      <div class="logo-item"><div class="logo-text">PLC</div><div class="lname">PLC Programming</div></div>
+      <div class="logo-item"><div class="logo-text">LD</div><div class="lname">Ladder Logic</div></div>
+      <div class="logo-item"><div class="logo-emoji">⚙️</div><div class="lname">Actuation &amp; Sensing</div></div>
+      <div class="logo-item"><div class="logo-emoji">📐</div><div class="lname">Kinematics &amp; Dynamics</div></div>
+      <div class="logo-item"><div class="logo-emoji">🎛️</div><div class="lname">Control Systems</div></div>
+      <div class="logo-item"><div class="logo-emoji">🧱</div><div class="lname">CAD Assemblies</div></div>
+      <div class="logo-item"><div class="logo-text">S5K</div><div class="lname">Studio 5000</div></div>
+      <div class="logo-item"><div class="logo-text">PX</div><div class="lname">PLCnext Engineer</div></div>
+      <div class="logo-item"><div class="logo-text">EP</div><div class="lname">EPLAN</div></div>
+      <div class="logo-item"><div class="logo-text">FT</div><div class="lname">FactoryTalk</div></div>
+    </div>
+  </div>
 
-  <div class="skill-section"><div class="skill-sec-title"><span>Developer Tools</span></div><div class="logos-grid"><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/><div class="lname">Git</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="filter:invert(1) brightness(.75)"/><div class="lname">GitHub</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/><div class="lname">VS Code</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"/><div class="lname">Linux</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/><div class="lname">Figma</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><div class="lname">HTML/CSS</div></div><div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/><div class="lname">JavaScript</div></div></div><div class="pill-grid" style="margin-top:16px"><div class="sk-pill"><div class="sk-pill-dot"></div>Anvil</div><div class="sk-pill"><div class="sk-pill-dot"></div>GitHub Pages</div><div class="sk-pill"><div class="sk-pill-dot"></div>API Testing</div></div></div>
+  <div class="skill-section">
+    <div class="skill-sec-title"><span>Developer Tools</span></div>
+    <div class="logos-grid">
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/><div class="lname">Git</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1) brightness(.75)"/><div class="lname">GitHub</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"/><div class="lname">VS Code</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"/><div class="lname">Linux</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/><div class="lname">Figma</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/><div class="lname">HTML/CSS</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/><div class="lname">JavaScript</div></div>
+      <div class="logo-item"><div class="logo-text">ANV</div><div class="lname">Anvil</div></div>
+      <div class="logo-item"><div class="logo-text">GH</div><div class="lname">GitHub Pages</div></div>
+      <div class="logo-item"><div class="logo-emoji">🧪</div><div class="lname">API Testing</div></div>
+    </div>
+  </div>
 
-  <div class="skill-section"><div class="skill-sec-title"><span>Product, Strategy &amp; Communication</span></div><div class="pill-grid"><div class="sk-pill"><div class="sk-pill-dot"></div>Product Thinking</div><div class="sk-pill"><div class="sk-pill-dot"></div>AI Solution Scoping</div><div class="sk-pill"><div class="sk-pill-dot"></div>Requirements Gathering</div><div class="sk-pill"><div class="sk-pill-dot"></div>Strategic Analysis</div><div class="sk-pill"><div class="sk-pill-dot"></div>Research Synthesis</div><div class="sk-pill"><div class="sk-pill-dot"></div>Technical Documentation</div><div class="sk-pill"><div class="sk-pill-dot"></div>Presentation Design</div><div class="sk-pill"><div class="sk-pill-dot"></div>Stakeholder Communication</div><div class="sk-pill"><div class="sk-pill-dot"></div>Dashboard Storytelling</div><div class="sk-pill"><div class="sk-pill-dot"></div>Cross-functional Collaboration</div></div></div>
+  <div class="skill-section">
+    <div class="skill-sec-title"><span>Product, Strategy &amp; Communication</span></div>
+    <div class="logos-grid">
+      <div class="logo-item"><div class="logo-emoji">🧩</div><div class="lname">Product Thinking</div></div>
+      <div class="logo-item"><div class="logo-emoji">👥</div><div class="lname">User Research</div></div>
+      <div class="logo-item"><div class="logo-emoji">📊</div><div class="lname">Market Research</div></div>
+      <div class="logo-item"><div class="logo-emoji">🔍</div><div class="lname">Competitive Analysis</div></div>
+      <div class="logo-item"><div class="logo-emoji">📋</div><div class="lname">Requirements Gathering</div></div>
+      <div class="logo-item"><div class="logo-emoji">🤖</div><div class="lname">AI Solution Scoping</div></div>
+      <div class="logo-item"><div class="logo-emoji">♟️</div><div class="lname">Strategic Analysis</div></div>
+      <div class="logo-item"><div class="logo-emoji">📚</div><div class="lname">Research Synthesis</div></div>
+      <div class="logo-item"><div class="logo-emoji">📝</div><div class="lname">Technical Documentation</div></div>
+      <div class="logo-item"><div class="logo-emoji">🖥️</div><div class="lname">Presentation Design</div></div>
+      <div class="logo-item"><div class="logo-emoji">🤝</div><div class="lname">Stakeholder Communication</div></div>
+      <div class="logo-item"><div class="logo-emoji">📈</div><div class="lname">Dashboard Storytelling</div></div>
+      <div class="logo-item"><div class="logo-emoji">🔗</div><div class="lname">Cross-functional Collaboration</div></div>
+    </div>
+  </div>
 </div>
+
 </div>
 
 <div class="page" id="page-contact">
@@ -470,7 +584,6 @@ const lines=[
   "A Robotics Engineer.",
   "Data-Driven Thinker.",
   "An Applied AI/ML Developer.",
-  "A Product-Minded Engineer.",
   "An F1 Aficionado.",
   "An ML Enthusiast.",
   "Engineer. Builder. Strategist."
