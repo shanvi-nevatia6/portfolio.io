@@ -42,9 +42,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;ali
 .page-header h1 em{font-style:italic;opacity:.5}
 .page-header-sub{margin-top:14px;font-size:15px;color:var(--muted);max-width:560px;line-height:1.75}
 .content{max-width:1100px;margin:0 auto;padding:68px 64px}
-.tag{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.04em;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.65)}
-.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;padding:3px 10px;border-radius:100px;background:rgba(255,255,255,.07);color:var(--muted2)}
-.badge:before{content:'';width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.25)}
+.tag{display:inline-block;font-size:11px;font-weight:500;letter-spacing:.04em;padding:3px 10px;border-radius:4px;background:rgba(255,255,255,.05);color:var(--white);border:1px solid rgba(232,98,26,.5)}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:500;padding:3px 10px;border-radius:100px;background:rgba(255,255,255,.05);color:var(--white);border:1px solid rgba(232,98,26,.5)}
+.badge:before{content:'';width:5px;height:5px;border-radius:50%;background:var(--orange)}
 footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 64px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted2)}
 footer a{color:var(--orange2);text-decoration:none}
 @keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
@@ -153,6 +153,7 @@ footer a{color:var(--orange2);text-decoration:none}
 .pcard:hover{border-color:var(--border2);transform:translateY(-2px);box-shadow:0 6px 28px rgba(0,0,0,.5)}.pcard:hover:after{transform:scaleX(1)}
 .pcard.wide{grid-column:span 2;flex-direction:row;gap:24px;align-items:flex-start}
 .pvisual{width:140px;flex-shrink:0;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:44px;min-height:130px}
+.pvisual svg{width:52px;height:52px;color:var(--orange2)}
 .pcontent{flex:1;display:flex;flex-direction:column}
 .pn{font-size:10px;color:var(--muted2);letter-spacing:.1em;margin-bottom:10px}
 .ptitle{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;margin-bottom:10px;line-height:1.2}
@@ -275,7 +276,7 @@ footer a{color:var(--orange2);text-decoration:none}
   <div class="hero-grid-bg"></div><div class="hero-glow"></div>
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-tag"><div class="hero-tag-dot"></div>Robotics ET · ML Optimization · Purdue</div>
+      <div class="hero-tag"><div class="hero-tag-dot"></div>Robotics ET · AI/ML Optimization · Purdue</div>
       <h1 class="hero-name"><span class="first">Hello, I'm</span><span class="last">Shanvi.</span></h1>
       <div class="hero-type" id="heroTyping"><span class="cursor-blink"></span></div>
       <div class="hero-btns">
@@ -291,7 +292,7 @@ footer a{color:var(--orange2);text-decoration:none}
 </section>
 
 <section class="stats-row">
-  <div class="sbox"><div class="skey">Degree</div><div class="sval">Robotics ET</div><div class="ssub">Manufacturing ET · ML Track</div></div>
+  <div class="sbox"><div class="skey">Degree</div><div class="sval">Robotics ET</div><div class="ssub">Manufacturing ET · AI/ML Track</div></div>
   <div class="sbox"><div class="skey">University</div><div class="sval">Purdue University</div><div class="ssub">West Lafayette · Dean's List</div></div>
   <div class="sbox"><div class="skey">Focus</div><div class="sval">AI + Robotics + Data</div><div class="ssub">Where models meet real systems</div></div>
   <div class="sbox"><div class="skey">Published</div><div class="sval">3 Papers</div><div class="ssub">Robotics · AI · Education</div></div>
@@ -300,8 +301,8 @@ footer a{color:var(--orange2);text-decoration:none}
 <section class="about-band">
   <div><div class="ab-h">Engineering that<br/><em>ships.</em></div><span class="ab-btn" onclick="showPage('about')">More about me →</span></div>
   <div>
-    <p class="ab-p">I'm a <strong>Robotics Engineering Technology</strong> student at Purdue on the ML Optimization track, with minors in CIT and Management and a certificate in Data Science.</p>
-    <p class="ab-p">I build across <strong>AI/ML</strong>, <strong>robotics</strong>, <strong>data engineering</strong>, <strong>backend systems</strong>, and <strong>product strategy</strong> because the strongest technical systems are not just coded, modeled, or designed — they are integrated.</p>
+    <p class="ab-p">I'm a <strong>Robotics Engineering Technology</strong> student at Purdue on the AI/ML Optimization track, with minors in CIT and Management and a certificate in Data Science.</p>
+    <p class="ab-p">I build at the intersection of <strong>AI</strong>, <strong>robotics</strong>, and <strong>data</strong> — because the best technical systems don't just compute, they act in the real world.</p>
   </div>
 </section>
 
@@ -327,8 +328,8 @@ footer a{color:var(--orange2);text-decoration:none}
     <div class="about-card about-full">
       <div class="about-photo"><img src="shanvi_photo2.png" alt="Shanvi"/></div>
       <h3><span>👋</span>About Me</h3>
-      <p>I'm an undergrad majoring in <strong>Robotics Engineering Technology</strong> at Purdue University, with a concentration in ML Optimization, dual minors in CIT and Management, and a certificate in Applications of Data Science.</p>
-      <p>I'm someone who genuinely believes the most exciting problems live at the <strong>boundary between disciplines</strong> — where machine learning meets mechanical systems, where data tells a story that changes how something moves in the real world. My goal is to drive <strong>sustainable and groundbreaking advancements</strong> in robotics, automation, and AI — I'm especially drawn to the <strong>wearable technology</strong> space and the <strong>Formula 1 racing</strong> industry, where cutting-edge engineering meets real-world performance. I want to build systems that don't just think, but <strong>act</strong>.</p>
+      <p>I'm an undergrad majoring in <strong>Robotics Engineering Technology</strong> at Purdue University, with a concentration in AI/ML Optimization, dual minors in CIT and Management, and a certificate in Applications of Data Science.</p>
+      <p>I'm most interested in the space where <strong>machine learning</strong> meets <strong>mechanical systems</strong> — where raw data has to become a real decision, and where the right engineering call is often a strategic one too. My work spans <strong>robotics</strong>, <strong>automation</strong>, and <strong>AI</strong>, with a particular pull toward wearable technology and Formula 1, though I'm generally drawn to anything that puts engineering to work in the real world. Just as important to me as the build itself is the thinking behind it: why a solution is worth building, and who it actually serves.</p>
       <p>Beyond the technical work, I care deeply about <strong>community and giving back</strong>. I've founded two initiatives, competed at <strong>state level in basketball</strong>, hold a <strong>Taekwondo green stripe</strong>, and try to bring the same discipline I learned on the court into everything I build.</p>
     </div>
 
@@ -337,7 +338,7 @@ footer a{color:var(--orange2);text-decoration:none}
       <div class="vitals">
         <div class="vital"><div class="vital-key">University</div><div class="vital-val">Purdue University</div></div>
         <div class="vital"><div class="vital-key">Degree</div><div class="vital-val">B.Sc Manufacturing ET</div></div>
-        <div class="vital"><div class="vital-key">Track</div><div class="vital-val">ML Optimization</div></div>
+        <div class="vital"><div class="vital-key">Track</div><div class="vital-val">AI/ML Optimization</div></div>
         <div class="vital"><div class="vital-key">Minors</div><div class="vital-val">CIT · Management</div></div>
         <div class="vital"><div class="vital-key">Recognition</div><div class="vital-val">Dean's List · Semester Honors</div></div>
         <div class="vital"><div class="vital-key">Languages</div><div class="vital-val">English · Hindi · Bengali</div></div>
@@ -379,18 +380,18 @@ footer a{color:var(--orange2);text-decoration:none}
     </div>
     <div class="edu-deg" style="margin-top:14px;">
       <div><span style="color:var(--orange2);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Degree</span>&nbsp;&nbsp;&nbsp;<span style="color:rgba(255,255,255,.75);">B.Sc. Manufacturing Engineering Technology</span></div>
-      <div><span style="color:var(--orange2);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Major</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:rgba(255,255,255,.75);">Robotics Engineering Technology — ML Optimization Track</span></div>
+      <div><span style="color:var(--orange2);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Major</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:rgba(255,255,255,.75);">Robotics Engineering Technology — AI/ML Optimization Track</span></div>
       <div><span style="color:var(--orange2);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Minors</span>&nbsp;&nbsp;<span style="color:rgba(255,255,255,.75);">CIT &amp; Management</span>&nbsp;&nbsp;<span style="color:var(--muted2)">|</span>&nbsp;&nbsp;<span style="color:var(--orange2);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Certificate</span>&nbsp;&nbsp;<span style="color:rgba(255,255,255,.75);">Data Science</span></div>
       <div><span style="color:var(--orange2);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;">Recognition</span>&nbsp;&nbsp;<span style="color:rgba(255,255,255,.75);">Dean's List &amp; Semester Honors</span></div>
     </div>
   </div>
 
-  <div class="exp-section-label" style="margin-top:48px;">Work Experience</div>
+  <div class="exp-section-label" style="margin-top:48px;">Work Experience<span style="font-size:11px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--muted2);">(tap a card to expand)</span></div>
   <div class="exp-timeline">
 
-    <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon" style="background:rgba(232,98,26,.14)">🔬</div><div><div class="exp-role">Research Assistant</div><div class="exp-co">Center for AI &amp; Robotics Excellence in Medicine (CARE Lab) · Purdue University Edwardson School of Industrial Engineering</div></div></div><div class="exp-hr"><span class="badge">May 2026 – Present</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Conducted systematic literature reviews on AI and surgical robotics, synthesizing 20+ papers to support active research initiatives at the lab.</li><li>Performed data collection, cleaning, and analysis using Python and Excel, maintaining structured datasets for ongoing robotics research projects.</li><li>Developed and designed research presentations and slide decks in PowerPoint for consortium meetings and academic/industry audiences.</li><li>Coordinated lab events and consortium logistics, managing communication across faculty, graduate researchers, and 5+ external partner organizations.</li></ul><div class="exp-tags"><span class="tag">Research</span><span class="tag">Python</span><span class="tag">Data Analysis</span><span class="tag">Medical Robotics</span><span class="tag">Excel</span></div></div></div></div></div>
+    <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">🔬</div><div><div class="exp-role">Research Assistant</div><div class="exp-co">Center for AI &amp; Robotics Excellence in Medicine (CARE Lab) · Purdue University Edwardson School of Industrial Engineering</div></div></div><div class="exp-hr"><span class="badge">May 2026 – Present</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Automated CARE's Annual Workshop scheduling by designing a Google Apps Script–driven availability poll that auto-aggregates three-tier responses (Available / Could be available / Not available) from faculty, affiliates, and corporate partners in a live Google Sheet.</li><li>Acquired hands-on proficiency in Purdue's ZOPE content management platform, including its template and tag-based publishing structure, to support upcoming updates to CARE's departmental website.</li><li>Synthesized primary research literature for faculty briefings — including a Physical AI precision-medicine framework and two hand-gesture HCI studies — distilling AI's shift from analysis toward physical-world perception and action.</li><li>Led the messaging strategy behind CARE's brochure and consortium partner CTA panel, repositioning generic labels into benefit-driven value propositions (e.g., "Advance Research," "Co-Develop Technology") and authoring positioning copy for CARE's four core research pillars to sharpen the pitch for a mixed academic and industry audience.</li><li>Mapped CE/CME/CPE accreditation pathways across Purdue's Pharmacy, Nursing, and Online divisions, building a contact-verification tracker and cross-departmental outreach pipeline to identify and pursue partnership opportunities.</li></ul><div class="exp-tags"><span class="tag">Google Apps Script</span><span class="tag">ZOPE / CMS</span><span class="tag">Research Synthesis</span><span class="tag">Product Strategy</span><span class="tag">Messaging Strategy</span><span class="tag">Stakeholder Outreach</span></div></div></div></div></div>
 
-    <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon" style="background:rgba(232,98,26,.14)">🐾</div><div><div class="exp-role">Data Engineering Intern</div><div class="exp-co">TribesForGOOD · Mumbai-based Social Impact Company</div></div></div><div class="exp-hr"><span class="badge">Jun 2026 – Aug 2026</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Designed and built an end-to-end geospatial data pipeline spanning Mumbai's 24 municipal wards using Python and GeoPandas.</li><li>Architected a database schema and priority-scoring system combining satellite heat data, municipal census records, and population density data.</li><li>Developed a FastAPI backend to serve ward-level priority scores to a public-facing interactive map.</li><li>Advanced the initiative from reactive to predictive risk planning by building a PyTorch forecasting model.</li></ul><div class="exp-tags"><span class="tag">Python</span><span class="tag">GeoPandas</span><span class="tag">FastAPI</span><span class="tag">PyTorch</span><span class="tag">Geospatial Data</span></div></div></div></div></div>
+    <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">🐾</div><div><div class="exp-role">Data Engineering Intern</div><div class="exp-co">TribesForGOOD · Mumbai-based Social Impact Company</div></div></div><div class="exp-hr"><span class="badge">Jun 2026 – Aug 2026</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Designed and built an end-to-end geospatial data pipeline spanning Mumbai's 24 municipal wards using Python and GeoPandas.</li><li>Architected a database schema and priority-scoring system combining satellite heat data, municipal census records, and population density data.</li><li>Developed a FastAPI backend to serve ward-level priority scores to a public-facing interactive map.</li><li>Advanced the initiative from reactive to predictive risk planning by building a PyTorch forecasting model.</li></ul><div class="exp-tags"><span class="tag">Python</span><span class="tag">GeoPandas</span><span class="tag">FastAPI</span><span class="tag">PyTorch</span><span class="tag">Geospatial Data</span></div></div></div></div></div>
 
     <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">🎓</div><div><div class="exp-role">Undergraduate Teaching Assistant</div><div class="exp-co">Gateway to Engineering Technology · Purdue</div></div></div><div class="exp-hr"><span class="badge">Aug 2025 – Dec 2025</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Teaching and grading 200+ students covering physics, circuit prototyping, SolidWorks CAD, and data analysis.</li><li>Providing detailed feedback on assignments, quizzes, and exams to strengthen problem-solving skills.</li></ul><div class="exp-tags"><span class="tag">Teaching</span><span class="tag">SolidWorks</span><span class="tag">200+ students</span></div></div></div></div></div>
 
@@ -398,17 +399,17 @@ footer a{color:var(--orange2);text-decoration:none}
 
     <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">📊</div><div><div class="exp-role">Programmer</div><div class="exp-co">The Data Mine · Purdue University</div></div></div><div class="exp-hr"><span class="badge">Aug 2024 – Dec 2025</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Leveraged Python and R for data manipulation, visualization, and evaluation.</li><li>Collaborated with teams to analyze extensive datasets and formulate impactful solutions.</li><li>Engineered statistical models and strategies to address industry-relevant problems.</li></ul><div class="exp-tags"><span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span><span class="tag">Statistics</span></div></div></div></div></div>
 
-    <div class="exp-block"><div class="exp-card open"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon" style="background:rgba(232,98,26,.14)">🤖</div><div><div class="exp-role">Applied AI Developer Intern</div><div class="exp-co">Kairos Technologies</div><div class="exp-loc">Digital Engineering &amp; AI Firm</div></div></div><div class="exp-hr"><span class="badge">Jun 2025 – Jul 2025</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Built full-stack AI chatbot using Python, FastAPI, and Tkinter across 10+ file types with 80%+ extraction accuracy.</li><li>Evaluated GPT-4o, Claude, Gemini, and LLaMA across 30+ prompt scenarios — improving accuracy by 60% and response speed by 40%.</li><li>Designed a data summarization pipeline reducing processing time by 60% for files exceeding 1M rows.</li><li>Engineered multi-user support across 50+ test sessions, reducing session load time by 60%.</li></ul><div class="exp-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LLMs</span><span class="tag">Tkinter</span><span class="tag">Pandas</span><span class="tag">OpenAI API</span></div></div></div></div></div>
+    <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">🤖</div><div><div class="exp-role">Applied AI Developer Intern</div><div class="exp-co">Kairos Technologies</div><div class="exp-loc">Digital Engineering &amp; AI Firm</div></div></div><div class="exp-hr"><span class="badge">Jun 2025 – Jul 2025</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Built full-stack AI chatbot using Python, FastAPI, and Tkinter across 10+ file types with 80%+ extraction accuracy.</li><li>Evaluated GPT-4o, Claude, Gemini, and LLaMA across 30+ prompt scenarios — improving accuracy by 60% and response speed by 40%.</li><li>Designed a data summarization pipeline reducing processing time by 60% for files exceeding 1M rows.</li><li>Engineered multi-user support across 50+ test sessions, reducing session load time by 60%.</li></ul><div class="exp-tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LLMs</span><span class="tag">Tkinter</span><span class="tag">Pandas</span><span class="tag">OpenAI API</span></div></div></div></div></div>
 
     <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">🖥️</div><div><div class="exp-role">Developer Intern</div><div class="exp-co">Lee and Nee Software · IT Firm</div></div></div><div class="exp-hr"><span class="badge">May 2022 – Jul 2023</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Debugged software and rectified syntax and logic errors across multiple product lines.</li><li>Documented client requirements through market research and interviews; built databases and queries.</li><li>Conducted competitor benchmarking and submitted product improvement reports.</li></ul><div class="exp-tags"><span class="tag">Software Dev</span><span class="tag">Debugging</span><span class="tag">Databases</span></div></div></div></div></div>
 
     <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">💻</div><div><div class="exp-role">Research Intern</div><div class="exp-co">Funcode · IT Start-up</div></div></div><div class="exp-hr"><span class="badge">Dec 2022 – Jan 2023</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Designed and administered questionnaires to evaluate stress factors, collecting insights from 50+ respondents.</li><li>Leveraged Python and Pandas for data manipulation, visualization, and analysis.</li><li>Presented findings with infographics, highlighting key issues and recommendations.</li></ul><div class="exp-tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Research</span><span class="tag">Data Viz</span></div></div></div></div></div>
   </div>
 
-  <div class="exp-section-label">Leadership &amp; Initiatives</div>
+  <div class="exp-section-label">Leadership &amp; Initiatives<span style="font-size:11px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--muted2);">(tap a card to expand)</span></div>
   <div class="exp-timeline">
     <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">👩‍💻</div><div><div class="exp-role">Mentor</div><div class="exp-co">Women in Technology · Purdue University</div></div></div><div class="exp-hr"><span class="badge">Aug 2025 – Present</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Mentoring underrepresented students in STEM, providing guidance on academic paths, internships, and technical skill-building.</li><li>Supporting gender equity and representation through community events, workshops, and networking across engineering and CS at Purdue.</li><li>Connecting members with industry professionals and research opportunities in robotics, ML, and software.</li></ul><div class="exp-tags"><span class="tag">Mentorship</span><span class="tag">Community</span><span class="tag">STEM Equity</span></div></div></div></div></div>
-    <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon" style="background:rgba(232,98,26,.14)">⚡</div><div><div class="exp-role">Accelerator Program Mentee</div><div class="exp-co">ML@Purdue · Purdue University</div></div></div><div class="exp-hr"><span class="badge">Jan 2026 – May 2026</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Selected as an Accelerator Program Mentee, receiving structured mentorship in applied ML research, project scoping, and technical execution.</li><li>Implemented supervised ML models with feature engineering and evaluation for a robotics-focused project.</li><li>Collaborated with peers on model evaluation pipelines and iterated on project design with mentor feedback.</li></ul><div class="exp-tags"><span class="tag">ML</span><span class="tag">Supervised Learning</span><span class="tag">Feature Engineering</span><span class="tag">Robotics</span></div></div></div></div></div>
+    <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">⚡</div><div><div class="exp-role">Accelerator Program Mentee</div><div class="exp-co">ML@Purdue · Purdue University</div></div></div><div class="exp-hr"><span class="badge">Jan 2026 – May 2026</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Selected as an Accelerator Program Mentee, receiving structured mentorship in applied ML research, project scoping, and technical execution.</li><li>Implemented supervised ML models with feature engineering and evaluation for a robotics-focused project.</li><li>Collaborated with peers on model evaluation pipelines and iterated on project design with mentor feedback.</li></ul><div class="exp-tags"><span class="tag">ML</span><span class="tag">Supervised Learning</span><span class="tag">Feature Engineering</span><span class="tag">Robotics</span></div></div></div></div></div>
     <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">🦾</div><div><div class="exp-role">Software Sub-Team Member</div><div class="exp-co">Humanoid Robotics Club · Purdue University</div></div></div><div class="exp-hr"><span class="badge">Aug 2024 – May 2025</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Developed algorithms for humanoid robot control systems ensuring precise movement and coordination.</li><li>Programmed sensor systems to detect and prevent malfunctions in dynamic environments.</li><li>Collaborated with hardware team to synchronize software and mechanical systems.</li></ul><div class="exp-tags"><span class="tag">C++</span><span class="tag">Robotics</span><span class="tag">Sensors</span><span class="tag">Control Systems</span></div></div></div></div></div>
     <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">🛡️</div><div><div class="exp-role">Founder</div><div class="exp-co">CyberShield · Cybersecurity Non-Profit</div></div></div><div class="exp-hr"><span class="badge">Jun 2023 – Jul 2024</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Launched initiative spreading cybersecurity awareness via social media, blogs, and podcasts, reaching 100+ community members.</li><li>Conducted 4 virtual and 2 on-site workshops on cybersecurity and cyberbullying for 50+ students aged 12–18.</li><li>Developed cyber-safety helpline with 10+ volunteers, helping 500+ people with real-time queries.</li></ul><div class="exp-tags"><span class="tag">Founder</span><span class="tag">Non-Profit</span><span class="tag">Cybersecurity</span></div></div></div></div></div>
     <div class="exp-block"><div class="exp-card"><div class="exp-head" onclick="this.closest('.exp-card').classList.toggle('open')"><div class="exp-hl"><div class="exp-icon">👗</div><div><div class="exp-role">Founder</div><div class="exp-co">The Tech Closet · Sustainable Fashion Initiative</div></div></div><div class="exp-hr"><span class="badge">Sep 2022 – Jan 2025</span><div class="exp-chev">⌄</div></div></div><div class="exp-body"><div class="exp-divider"></div><div class="exp-inner"><ul><li>Founded a technology-driven sustainable fashion initiative combining environmental awareness with community action.</li><li>Spread awareness about the environmental costs of textiles and the importance of reuse and recycling.</li><li>Collected 500+ clothing items and donated them to local shelters.</li></ul><div class="exp-tags"><span class="tag">Founder</span><span class="tag">Sustainability</span><span class="tag">Community</span></div></div></div></div></div>
@@ -438,13 +439,13 @@ footer a{color:var(--orange2);text-decoration:none}
   <div id="proj-tab-technical" style="display:none">
     <div class="exp-section-label" style="margin-top:0">Technical Projects</div>
     <div class="proj-grid" style="margin-top:24px;">
-      <div class="pcard wide"><div class="pvisual">🦾</div><div class="pcontent"><div class="pn">001</div><div class="ptitle">Fanuc Metal Sorter</div><p class="pdesc">Built a fully automated metal sorting workflow using a Fanuc industrial robot, metal detection sensor, embedded I/O, and real-time indicator lights. The system identifies objects and executes pick-and-place sorting without manual intervention.</p><div class="ptags"><span class="tag">Fanuc Robot</span><span class="tag">Automation</span><span class="tag">Metal Sensing</span><span class="tag">Embedded I/O</span><span class="tag">Industrial Robotics</span></div></div></div>
-      <div class="pcard"><div class="pn">002</div><div class="ptitle">Yamaha Pick &amp; Place</div><p class="pdesc">Programmed a Yamaha industrial robot for repeatable pick-and-place operations, focusing on precise positioning, motion sequencing, and reliable automation behavior in a controlled robotics lab environment.</p><div class="ptags"><span class="tag">Yamaha Robot</span><span class="tag">Motion Planning</span><span class="tag">Automation</span><span class="tag">Robotics</span></div></div>
-      <div class="pcard wide"><div class="pvisual">🤖</div><div class="pcontent"><div class="pn">003</div><div class="ptitle">AI Literacy Website</div><p class="pdesc">Built an interactive AI education platform with readiness assessment logic, scenario-based questions, personalized resource recommendations, and browser-based progress tracking using HTML, CSS, JavaScript, and LocalStorage.</p><div class="ptags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">LocalStorage</span><span class="tag">AI Education</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/ai-certification-website" target="_blank">GitHub ↗</a><a class="project-link" href="https://shanvi-nevatia6.github.io/ai-certification-website/" target="_blank">Live Site ↗</a></div></div></div>
-      <div class="pcard wide"><div class="pvisual">💬</div><div class="pcontent"><div class="pn">004</div><div class="ptitle">Java Chat Application</div><p class="pdesc">Developed a real-time messaging application in Java with secure user authentication, session management, and a responsive Swing-based GUI. Designed a multithreaded socket architecture to support simultaneous client connections.</p><div class="ptags"><span class="tag">Java</span><span class="tag">Swing</span><span class="tag">Sockets</span><span class="tag">Multithreading</span><span class="tag">Authentication</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/java-chat-application" target="_blank">GitHub ↗</a></div></div></div>
-      <div class="pcard"><div class="pn">005</div><div class="ptitle">MedConnect</div><p class="pdesc">Built a healthcare dashboard integrating symptom tracking, vital monitoring, appointment data, and patient-facing reporting workflows. Earned Special Mention and placed in the top 15 out of 200 hackathon submissions.</p><div class="ptags"><span class="tag">Python</span><span class="tag">Healthcare</span><span class="tag">Dashboard</span><span class="tag">GUI</span><span class="tag">Data Tracking</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/medconnect" target="_blank">GitHub ↗</a></div></div>
-      <div class="pcard wide"><div class="pvisual">🏎️</div><div class="pcontent"><div class="pn">006</div><div class="ptitle">F1 Circuit Race System</div><p class="pdesc">Led a 10-member team to design an F1-style RC race system using Arduino, lasers, LDR sensors, and Python-based race logic to capture real-time lap results and support automated race outcome tracking.</p><div class="ptags"><span class="tag">Arduino</span><span class="tag">Python</span><span class="tag">Sensors</span><span class="tag">LDR</span><span class="tag">Team Lead</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/f1-circuit-race-system" target="_blank">GitHub ↗</a></div></div></div>
-      <div class="pcard wide"><div class="pvisual">🎮</div><div class="pcontent"><div class="pn">007</div><div class="ptitle">Python Game Suite</div><p class="pdesc">Created a terminal-based Python game suite featuring Number Guessing, Bomb Defuse, and Tic Tac Toe, with difficulty levels, score tracking, prize logic, and player profile storage across multiple gameplay sessions.</p><div class="ptags"><span class="tag">Python</span><span class="tag">Game Logic</span><span class="tag">Terminal App</span><span class="tag">Profile Storage</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/python-game-suite" target="_blank">GitHub ↗</a></div></div></div>
+      <div class="pcard wide"><div class="pvisual"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="38" r="4" stroke="currentColor" stroke-width="2"/><path d="M10 34V24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 24L24 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="18" r="3" stroke="currentColor" stroke-width="2"/><path d="M24 18L36 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="36" cy="14" r="2.5" stroke="currentColor" stroke-width="2"/><path d="M36 14L40 10M36 14L40 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="pcontent"><div class="pn">001</div><div class="ptitle">Fanuc Metal Sorter</div><p class="pdesc">Built a fully automated metal sorting workflow using a Fanuc industrial robot, metal detection sensor, embedded I/O, and real-time indicator lights. The system identifies objects and executes pick-and-place sorting without manual intervention.</p><div class="ptags"><span class="tag">Fanuc Robot</span><span class="tag">Automation</span><span class="tag">Metal Sensing</span><span class="tag">Embedded I/O</span><span class="tag">Industrial Robotics</span></div></div></div>
+      <div class="pcard"><div class="pvisual"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="38" r="4" stroke="currentColor" stroke-width="2"/><path d="M10 34V24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 24L24 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="18" r="3" stroke="currentColor" stroke-width="2"/><path d="M24 18L36 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="36" cy="14" r="2.5" stroke="currentColor" stroke-width="2"/><path d="M36 14L40 10M36 14L40 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div><div class="pn">002</div><div class="ptitle">Yamaha Pick &amp; Place</div><p class="pdesc">Programmed a Yamaha industrial robot for repeatable pick-and-place operations, focusing on precise positioning, motion sequencing, and reliable automation behavior in a controlled robotics lab environment.</p><div class="ptags"><span class="tag">Yamaha Robot</span><span class="tag">Motion Planning</span><span class="tag">Automation</span><span class="tag">Robotics</span></div></div>
+      <div class="pcard wide"><div class="pvisual"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="14" r="2" fill="currentColor"/><circle cx="16" cy="26" r="2" fill="currentColor"/><circle cx="32" cy="26" r="2" fill="currentColor"/><circle cx="24" cy="34" r="2" fill="currentColor"/><path d="M24 14L16 26M24 14L32 26M16 26L24 34M32 26L24 34M16 26L32 26" stroke="currentColor" stroke-width="1.5"/></svg></div><div class="pcontent"><div class="pn">003</div><div class="ptitle">AI Literacy Website</div><p class="pdesc">Built an interactive AI education platform with readiness assessment logic, scenario-based questions, personalized resource recommendations, and browser-based progress tracking using HTML, CSS, JavaScript, and LocalStorage.</p><div class="ptags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">LocalStorage</span><span class="tag">AI Education</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/ai-certification-website" target="_blank">GitHub ↗</a><a class="project-link" href="https://shanvi-nevatia6.github.io/ai-certification-website/" target="_blank">Live Site ↗</a></div></div></div>
+      <div class="pcard wide"><div class="pvisual"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 12h32a2 2 0 012 2v16a2 2 0 01-2 2H20l-8 6v-6h-4a2 2 0 01-2-2V14a2 2 0 012-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="16" cy="22" r="1.5" fill="currentColor"/><circle cx="24" cy="22" r="1.5" fill="currentColor"/><circle cx="32" cy="22" r="1.5" fill="currentColor"/></svg></div><div class="pcontent"><div class="pn">004</div><div class="ptitle">Java Chat Application</div><p class="pdesc">Developed a real-time messaging application in Java with secure user authentication, session management, and a responsive Swing-based GUI. Designed a multithreaded socket architecture to support simultaneous client connections.</p><div class="ptags"><span class="tag">Java</span><span class="tag">Swing</span><span class="tag">Sockets</span><span class="tag">Multithreading</span><span class="tag">Authentication</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/java-chat-application" target="_blank">GitHub ↗</a></div></div></div>
+      <div class="pcard"><div class="pvisual"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 24h8l4-12 6 20 4-14 3 6h13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="pn">005</div><div class="ptitle">MedConnect</div><p class="pdesc">Built a healthcare dashboard integrating symptom tracking, vital monitoring, appointment data, and patient-facing reporting workflows. Earned Special Mention and placed in the top 15 out of 200 hackathon submissions.</p><div class="ptags"><span class="tag">Python</span><span class="tag">Healthcare</span><span class="tag">Dashboard</span><span class="tag">GUI</span><span class="tag">Data Tracking</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/medconnect" target="_blank">GitHub ↗</a></div></div>
+      <div class="pcard wide"><div class="pvisual"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 4v40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 8h6v6h6V8h6v6h-6v6h6v6h-6v-6h-6v6h-6V20h6v-6h-6V8z" fill="currentColor"/></svg></div><div class="pcontent"><div class="pn">006</div><div class="ptitle">F1 Circuit Race System</div><p class="pdesc">Led a 10-member team to design an F1-style RC race system using Arduino, lasers, LDR sensors, and Python-based race logic to capture real-time lap results and support automated race outcome tracking.</p><div class="ptags"><span class="tag">Arduino</span><span class="tag">Python</span><span class="tag">Sensors</span><span class="tag">LDR</span><span class="tag">Team Lead</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/f1-circuit-race-system" target="_blank">GitHub ↗</a></div></div></div>
+      <div class="pcard wide"><div class="pvisual"><svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="16" width="36" height="18" rx="9" stroke="currentColor" stroke-width="2"/><path d="M14 22v6M11 25h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="30" cy="22" r="1.8" fill="currentColor"/><circle cx="35" cy="27" r="1.8" fill="currentColor"/></svg></div><div class="pcontent"><div class="pn">007</div><div class="ptitle">Python Game Suite</div><p class="pdesc">Created a terminal-based Python game suite featuring Number Guessing, Bomb Defuse, and Tic Tac Toe, with difficulty levels, score tracking, prize logic, and player profile storage across multiple gameplay sessions.</p><div class="ptags"><span class="tag">Python</span><span class="tag">Game Logic</span><span class="tag">Terminal App</span><span class="tag">Profile Storage</span></div><div class="project-links"><a class="project-link" href="https://github.com/shanvi-nevatia6/python-game-suite" target="_blank">GitHub ↗</a></div></div></div>
     </div>
   </div>
 </div>
@@ -466,42 +467,41 @@ footer a{color:var(--orange2);text-decoration:none}
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB"/><div class="lname">MATLAB</div></div>
       <div class="logo-item"><div class="logo-text">TeX</div><div class="lname">LaTeX</div></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino"/><div class="lname">Arduino</div></div>
-      <div class="logo-item"><div class="logo-text">PLC</div><div class="lname">PLC / Ladder Logic</div></div>
+      <div class="logo-item"><div class="logo-text">PLC</div><div class="lname">PLC Programming</div></div>
+      <div class="logo-item"><div class="logo-text">LD</div><div class="lname">Ladder Logic</div></div>
     </div>
   </div>
 
   <div class="skill-section">
-    <div class="skill-sec-title"><span>Libraries &amp; Frameworks</span></div>
+    <div class="skill-sec-title"><span>AI, Computer Vision &amp; Manufacturing Analytics</span></div>
+    <div class="logos-grid">
+      <div class="logo-item"><div class="logo-text">SL</div><div class="lname">Supervised Learning</div></div>
+      <div class="logo-item"><div class="logo-text">FE</div><div class="lname">Feature Engineering</div></div>
+      <div class="logo-item"><div class="logo-text">ME</div><div class="lname">Model Evaluation</div></div>
+      <div class="logo-item"><div class="logo-text">TSF</div><div class="lname">Time-Series Forecasting</div></div>
+      <div class="logo-item"><div class="logo-text">LLM</div><div class="lname">LLM Benchmarking</div></div>
+      <div class="logo-item"><div class="logo-text">PE</div><div class="lname">Prompt Engineering</div></div>
+      <div class="logo-item"><div class="logo-text">NLP</div><div class="lname">NLP Concepts</div></div>
+      <div class="logo-item"><div class="logo-text">AGT</div><div class="lname">AI Agent Evaluation</div></div>
+      <div class="logo-item"><div class="logo-text">CV</div><div class="lname">Computer Vision</div></div>
+    </div>
+  </div>
+
+  <div class="skill-section">
+    <div class="skill-sec-title"><span>AI/ML Libraries, Frameworks &amp; APIs</span></div>
     <div class="logos-grid">
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"/><div class="lname">NumPy</div></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"/><div class="lname">Pandas</div></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"/><div class="lname">PyTorch</div></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"/><div class="lname">FastAPI</div></div>
       <div class="logo-item"><div class="logo-text">MPL</div><div class="lname">Matplotlib</div></div>
       <div class="logo-item"><div class="logo-text">HF</div><div class="lname">Hugging Face</div></div>
-      <div class="logo-item"><div class="logo-text">AI</div><div class="lname">OpenAI API</div></div>
       <div class="logo-item"><div class="logo-text">Geo</div><div class="lname">GeoPandas</div></div>
       <div class="logo-item"><div class="logo-text">SK</div><div class="lname">Scikit-Learn</div></div>
       <div class="logo-item"><div class="logo-text">PD</div><div class="lname">Pydantic</div></div>
       <div class="logo-item"><div class="logo-text">TK</div><div class="lname">Tkinter</div></div>
+      <div class="logo-item"><div class="logo-text">AI</div><div class="lname">OpenAI API</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"/><div class="lname">FastAPI</div></div>
       <div class="logo-item"><div class="logo-text">API</div><div class="lname">REST APIs</div></div>
-    </div>
-  </div>
-
-  <div class="skill-section">
-    <div class="skill-sec-title"><span>AI / Machine Learning</span></div>
-    <div class="logos-grid">
-      <div class="logo-item"><div class="logo-emoji">🧠</div><div class="lname">Supervised Learning</div></div>
-      <div class="logo-item"><div class="logo-emoji">🧩</div><div class="lname">Feature Engineering</div></div>
-      <div class="logo-item"><div class="logo-emoji">📈</div><div class="lname">Model Evaluation</div></div>
-      <div class="logo-item"><div class="logo-emoji">⏱️</div><div class="lname">Time-Series Forecasting</div></div>
-      <div class="logo-item"><div class="logo-emoji">🤖</div><div class="lname">LLM Benchmarking</div></div>
-      <div class="logo-item"><div class="logo-emoji">💬</div><div class="lname">Prompt Engineering</div></div>
-      <div class="logo-item"><div class="logo-emoji">🗣️</div><div class="lname">NLP Concepts</div></div>
-      <div class="logo-item"><div class="logo-emoji">🧪</div><div class="lname">AI Agent Evaluation</div></div>
-      <div class="logo-item"><div class="logo-emoji">🔎</div><div class="lname">Retrieval Systems</div></div>
-      <div class="logo-item"><div class="logo-emoji">📊</div><div class="lname">Applied Statistics</div></div>
-      <div class="logo-item"><div class="logo-text">∑</div><div class="lname">Linear Algebra</div></div>
     </div>
   </div>
 
@@ -511,55 +511,46 @@ footer a{color:var(--orange2);text-decoration:none}
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"/><div class="lname">PostgreSQL</div></div>
       <div class="logo-item"><div class="logo-text">GIS</div><div class="lname">PostGIS</div></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" alt="JupyterLab"/><div class="lname">JupyterLab</div></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions"/><div class="lname">GitHub Actions</div></div>
       <div class="logo-item"><div class="logo-text">BI</div><div class="lname">Power BI</div></div>
       <div class="logo-item"><div class="logo-text">Tb</div><div class="lname">Tableau</div></div>
       <div class="logo-item"><div class="logo-text">SPSS</div><div class="lname">SPSS</div></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" alt="Supabase"/><div class="lname">Supabase</div></div>
-      <div class="logo-item"><div class="logo-emoji">🔁</div><div class="lname">Data Pipelines</div></div>
-      <div class="logo-item"><div class="logo-emoji">✅</div><div class="lname">Data Validation</div></div>
-      <div class="logo-item"><div class="logo-emoji">📊</div><div class="lname">Dashboarding</div></div>
-      <div class="logo-item"><div class="logo-emoji">🗺️</div><div class="lname">Geospatial Data</div></div>
-      <div class="logo-item"><div class="logo-emoji">📖</div><div class="lname">Data Storytelling</div></div>
+      <div class="logo-item"><div class="logo-text">DP</div><div class="lname">Data Pipelines</div></div>
+      <div class="logo-item"><div class="logo-text">DV</div><div class="lname">Data Validation</div></div>
+      <div class="logo-item"><div class="logo-text">GEO</div><div class="lname">Geospatial Data</div></div>
+      <div class="logo-item"><div class="logo-text">DST</div><div class="lname">Data Storytelling</div></div>
     </div>
   </div>
 
   <div class="skill-section">
-    <div class="skill-sec-title"><span>Robotics &amp; Automation</span></div>
+    <div class="skill-sec-title"><span>Engineering &amp; Developer Tools</span></div>
     <div class="logos-grid">
       <div class="logo-item"><div class="logo-text">FNC</div><div class="lname">FANUC Robots</div></div>
       <div class="logo-item"><div class="logo-text">YMH</div><div class="lname">Yamaha Robots</div></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino"/><div class="lname">Arduino</div></div>
+      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ros/ros-original.svg" alt="ROS2"/><div class="lname">ROS2</div></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" alt="Sensors"/><div class="lname">Sensor Integration</div></div>
       <div class="logo-item"><div class="logo-text">SW</div><div class="lname">SolidWorks</div></div>
       <div class="logo-item"><div class="logo-text">NX</div><div class="lname">Siemens NX</div></div>
-      <div class="logo-item"><div class="logo-emoji">🏭</div><div class="lname">Industrial Automation</div></div>
-      <div class="logo-item"><div class="logo-text">PLC</div><div class="lname">PLC Programming</div></div>
-      <div class="logo-item"><div class="logo-text">LD</div><div class="lname">Ladder Logic</div></div>
-      <div class="logo-item"><div class="logo-emoji">⚙️</div><div class="lname">Actuation &amp; Sensing</div></div>
-      <div class="logo-item"><div class="logo-emoji">📐</div><div class="lname">Kinematics &amp; Dynamics</div></div>
-      <div class="logo-item"><div class="logo-emoji">🎛️</div><div class="lname">Control Systems</div></div>
-      <div class="logo-item"><div class="logo-emoji">🧱</div><div class="lname">CAD Assemblies</div></div>
+      <div class="logo-item"><div class="logo-text">IA</div><div class="lname">Industrial Automation</div></div>
+      <div class="logo-item"><div class="logo-text">A&amp;S</div><div class="lname">Actuation &amp; Sensing</div></div>
+      <div class="logo-item"><div class="logo-text">K&amp;D</div><div class="lname">Kinematics &amp; Dynamics</div></div>
+      <div class="logo-item"><div class="logo-text">CTL</div><div class="lname">Control Systems</div></div>
+      <div class="logo-item"><div class="logo-text">CAD</div><div class="lname">CAD Assemblies</div></div>
       <div class="logo-item"><div class="logo-text">S5K</div><div class="lname">Studio 5000</div></div>
       <div class="logo-item"><div class="logo-text">PX</div><div class="lname">PLCnext Engineer</div></div>
       <div class="logo-item"><div class="logo-text">EP</div><div class="lname">EPLAN</div></div>
       <div class="logo-item"><div class="logo-text">FT</div><div class="lname">FactoryTalk</div></div>
-    </div>
-  </div>
-
-  <div class="skill-section">
-    <div class="skill-sec-title"><span>Developer Tools</span></div>
-    <div class="logos-grid">
+      <div class="logo-item"><div class="logo-text">FIK</div><div class="lname">Forward &amp; Inverse Kinematics</div></div>
+      <div class="logo-item"><div class="logo-text">TRJ</div><div class="lname">Trajectory Planning</div></div>
+      <div class="logo-item"><div class="logo-text">SIM</div><div class="lname">Robot Modeling &amp; Simulation</div></div>
+      <div class="logo-item"><div class="logo-text">SLAM</div><div class="lname">SLAM</div></div>
+      <div class="logo-item"><div class="logo-text">ISM</div><div class="lname">Isaac Sim</div></div>
+      <div class="logo-item"><div class="logo-text">PP</div><div class="lname">Path Planning</div></div>
+      <div class="logo-item"><div class="logo-text">PID</div><div class="lname">PID Control</div></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"/><div class="lname">Git</div></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" style="filter:invert(1) brightness(.75)"/><div class="lname">GitHub</div></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"/><div class="lname">VS Code</div></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux"/><div class="lname">Linux</div></div>
       <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma"/><div class="lname">Figma</div></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"/><div class="lname">HTML/CSS</div></div>
-      <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"/><div class="lname">JavaScript</div></div>
       <div class="logo-item"><div class="logo-text">ANV</div><div class="lname">Anvil</div></div>
-      <div class="logo-item"><div class="logo-text">GH</div><div class="lname">GitHub Pages</div></div>
-      <div class="logo-item"><div class="logo-emoji">🧪</div><div class="lname">API Testing</div></div>
     </div>
   </div>
 
@@ -570,14 +561,11 @@ footer a{color:var(--orange2);text-decoration:none}
       <div class="logo-item"><div class="logo-emoji">👥</div><div class="lname">User Research</div></div>
       <div class="logo-item"><div class="logo-emoji">📊</div><div class="lname">Market Research</div></div>
       <div class="logo-item"><div class="logo-emoji">🔍</div><div class="lname">Competitive Analysis</div></div>
-      <div class="logo-item"><div class="logo-emoji">📋</div><div class="lname">Requirements Gathering</div></div>
       <div class="logo-item"><div class="logo-emoji">🤖</div><div class="lname">AI Solution Scoping</div></div>
       <div class="logo-item"><div class="logo-emoji">♟️</div><div class="lname">Strategic Analysis</div></div>
       <div class="logo-item"><div class="logo-emoji">📚</div><div class="lname">Research Synthesis</div></div>
       <div class="logo-item"><div class="logo-emoji">📝</div><div class="lname">Technical Documentation</div></div>
-      <div class="logo-item"><div class="logo-emoji">🖥️</div><div class="lname">Presentation Design</div></div>
       <div class="logo-item"><div class="logo-emoji">🤝</div><div class="lname">Stakeholder Communication</div></div>
-      <div class="logo-item"><div class="logo-emoji">📈</div><div class="lname">Dashboard Storytelling</div></div>
       <div class="logo-item"><div class="logo-emoji">🔗</div><div class="lname">Cross-functional Collaboration</div></div>
     </div>
   </div>
